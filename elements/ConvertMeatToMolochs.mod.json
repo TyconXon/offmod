@@ -1,0 +1,20 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Campfire cooking",
+    "xpReward": 6.0,
+    "cookingTime": 100,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "campfireCookingInputStack": {
+      "value": "CUSTOM:Meat"
+    },
+    "campfireCookingReturnStack": {
+      "value": "CUSTOM:MolochsMeat"
+    },
+    "name": "convert_meat_to_molochs",
+    "namespace": "mod"
+  }
+}

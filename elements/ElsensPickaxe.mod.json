@@ -1,0 +1,41 @@
+{
+  "_fv": 24,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "elsenpickaxe",
+    "customModelName": "Normal",
+    "name": "Elsen's Pickaxe",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:OFF"
+    },
+    "toolType": "Pickaxe",
+    "harvestLevel": 3,
+    "efficiency": 7.0,
+    "attackSpeed": 1.5,
+    "enchantability": 2,
+    "damageVsEntity": 2.5,
+    "usageCount": 1561,
+    "blocksAffected": [
+      {
+        "value": "CUSTOM:RawMetal"
+      }
+    ],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:RawMetal"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onEntityHitWith": {
+      "name": "ElsensPickaxeExtractMetal"
+    },
+    "onBlockDestroyedWithTool": {
+      "name": "ElsensPickaxeExtractSmoke"
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "itemuse": {
+    "category": "player",
+    "subtitle": "subtitles.itemuse",
+    "sounds": [
+      {
+        "name": "offmod:00_-_item1",
+        "stream": false
+      }
+    ]
+  },
+  "cowextract": {
+    "category": "neutral",
+    "subtitle": "subtitles.cowextract",
+    "sounds": [
+      {
+        "name": "offmod:bloodyimpact",
+        "stream": false
+      },
+      {
+        "name": "offmod:fleshimpact",
+        "stream": false
+      }
+    ]
+  },
+  "global": {
+    "category": "neutral",
+    "subtitle": "subtitles.global",
+    "sounds": [
+      {
+        "name": "offmod:global",
+        "stream": false
+      }
+    ]
+  },
+  "strike": {
+    "category": "hostile",
+    "subtitle": "subtitles.strike",
+    "sounds": [
+      {
+        "name": "offmod:00_-_strike01",
+        "stream": false
+      },
+      {
+        "name": "offmod:00_-_strike02",
+        "stream": false
+      },
+      {
+        "name": "offmod:00_-_strike05",
+        "stream": false
+      },
+      {
+        "name": "offmod:00_-_attack2",
+        "stream": false
+      }
+    ]
+  },
+  "cash_register": {
+    "category": "neutral",
+    "subtitle": "subtitles.cash_register",
+    "sounds": [
+      {
+        "name": "offmod:buy2",
+        "stream": false
+      }
+    ]
+  },
+  "robotstep": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "offmod:robotstep",
+        "stream": false
+      }
+    ]
+  },
+  "error": {
+    "category": "neutral",
+    "subtitle": "subtitles.error",
+    "sounds": [
+      {
+        "name": "offmod:error",
+        "stream": false
+      }
+    ]
+  }
+}

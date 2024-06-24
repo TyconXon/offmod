@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "offmod:block/your_father"
+    },
+    "facing=east": {
+      "model": "offmod:block/your_father",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "offmod:block/your_father",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "offmod:block/your_father",
+      "y": 270
+    }
+  }
+}

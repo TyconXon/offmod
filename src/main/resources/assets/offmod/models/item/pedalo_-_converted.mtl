@@ -1,0 +1,13 @@
+newmtl m_ab2e2587-694e-d9ab-2c76-9274d6cd1b10
+Ka 0.0 0.0 0.0
+Kd 0.0 0.0 0.0
+Ks 0.0 0.0 0.0
+map_Kd offmod:blocks/texture
+Ns 100.0
+d 1.0
+newmtl none
+Ka 0.0 0.0 0.0
+Kd 0.0 0.0 0.0
+Ks 0.0 0.0 0.0
+Ns 100.0
+d 1.0

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "offmod:blocks/purplebottom",
+    "up": "offmod:blocks/purpletop",
+    "north": "offmod:blocks/purpleside",
+    "east": "offmod:blocks/purpleside",
+    "south": "offmod:blocks/purpleside",
+    "west": "offmod:blocks/purpleside",
+    "particle": "offmod:blocks/purplebottom"
+  }
+}

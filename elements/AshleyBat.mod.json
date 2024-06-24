@@ -1,0 +1,33 @@
+{
+  "_fv": 24,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "ashleybat",
+    "customModelName": "Normal",
+    "name": "Ashley Bat",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "COMBAT"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 6.0,
+    "enchantability": 22,
+    "damageVsEntity": 14.0,
+    "usageCount": 2031,
+    "blocksAffected": [],
+    "hasGlow": true,
+    "repairItems": [],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onCrafted": {
+      "name": "AshleyBatEnchant"
+    },
+    "onEntityHitWith": {
+      "name": "AshleyBatEnchant"
+    }
+  }
+}

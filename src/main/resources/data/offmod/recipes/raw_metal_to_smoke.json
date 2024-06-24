@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "experience": 1,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "offmod:raw_metal"
+  },
+  "result": {
+    "item": "offmod:bottle_of_smoke"
+  }
+}

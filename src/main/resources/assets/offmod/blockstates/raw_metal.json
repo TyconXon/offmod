@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "offmod:block/raw_metal"
+    },
+    "facing=east": {
+      "model": "offmod:block/raw_metal",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "offmod:block/raw_metal",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "offmod:block/raw_metal",
+      "y": 270
+    }
+  }
+}

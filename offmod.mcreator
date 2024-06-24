@@ -1,0 +1,828 @@
+{
+  "mod_elements": [
+    {
+      "name": "LuckTicketUsed",
+      "type": "procedure",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "luck_ticket_used",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/General"
+    },
+    {
+      "name": "LuckTicket",
+      "type": "food",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "luck_ticket",
+      "path": "~/Items/General"
+    },
+    {
+      "name": "FortuneTicket",
+      "type": "food",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fortune_ticket",
+      "path": "~/Items/General"
+    },
+    {
+      "name": "FortuneTicketUsed",
+      "type": "procedure",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fortune_ticket_used",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/General"
+    },
+    {
+      "name": "MolochsMeatFoodEaten",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "molochs_meat_food_eaten",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/General"
+    },
+    {
+      "name": "MolochsMeat",
+      "type": "food",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "molochs_meat",
+      "path": "~/Items/General"
+    },
+    {
+      "name": "AbaddonsMeatFoodEaten",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "abaddons_meat_food_eaten",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/General"
+    },
+    {
+      "name": "AbaddonsMeat",
+      "type": "food",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "abaddons_meat",
+      "path": "~/Items/General"
+    },
+    {
+      "name": "AshleyBat",
+      "type": "tool",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ashley_bat",
+      "path": "~/Items/Equipment/Bats"
+    },
+    {
+      "name": "AshleyBatEnchant",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ashley_bat_enchant",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Items/Equipment/Bats"
+    },
+    {
+      "name": "GreenScrappedMetal",
+      "type": "block",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_scrapped_metal",
+      "path": "~/Zones/Zone 1"
+    },
+    {
+      "name": "RawMetal",
+      "type": "block",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raw_metal",
+      "path": "~/Zones/Zone 1"
+    },
+    {
+      "name": "BottleOfSmoke",
+      "type": "item",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bottle_of_smoke",
+      "path": "~/Items"
+    },
+    {
+      "name": "ElsensPickaxe",
+      "type": "tool",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "elsens_pickaxe",
+      "path": "~/Items"
+    },
+    {
+      "name": "ElsensPickaxeExtractMetal",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "elsens_pickaxe_extract_metal",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "ElsensPickaxeExtractSmoke",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "elsens_pickaxe_extract_smoke",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "Plastic",
+      "type": "fluid",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plastic",
+      "metadata": {
+        "gb": true
+      },
+      "path": "~/Zones"
+    },
+    {
+      "name": "Elsen",
+      "type": "livingentity",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "elsen",
+      "path": "~/Characters"
+    },
+    {
+      "name": "SmokePurification",
+      "type": "code",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "smoke_purification",
+      "path": "~/Items"
+    },
+    {
+      "name": "ScrapMetal",
+      "type": "recipe",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrap_metal",
+      "path": "~/Items"
+    },
+    {
+      "name": "RawMetalToSmoke",
+      "type": "recipe",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raw_metal_to_smoke",
+      "path": "~/Items"
+    },
+    {
+      "name": "RawMetalToMetal",
+      "type": "recipe",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raw_metal_to_metal",
+      "path": "~/Items"
+    },
+    {
+      "name": "Meat",
+      "type": "fluid",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meat",
+      "metadata": {
+        "gb": true
+      },
+      "path": "~/Zones/Zone 1"
+    },
+    {
+      "name": "Pedalo",
+      "type": "livingentity",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pedalo",
+      "path": "~/Items"
+    },
+    {
+      "name": "PedaloRightClickedOnEntity",
+      "type": "procedure",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pedalo_right_clicked_on_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "PedaloOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pedalo_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "CommonSpectre",
+      "type": "livingentity",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "common_spectre",
+      "path": "~/Characters/Spectre"
+    },
+    {
+      "name": "Troquantary",
+      "type": "livingentity",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "troquantary",
+      "path": "~/Characters/Spectre"
+    },
+    {
+      "name": "ConvertMeatToAbaddons",
+      "type": "recipe",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "convert_meat_to_abaddons",
+      "path": "~/Items/General"
+    },
+    {
+      "name": "ConvertMeatToMolochs",
+      "type": "recipe",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "convert_meat_to_molochs",
+      "path": "~/Items/General"
+    },
+    {
+      "name": "CraftElsensPickaxe",
+      "type": "recipe",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craft_elsens_pickaxe",
+      "path": "~/Items"
+    },
+    {
+      "name": "OFF",
+      "type": "tab",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "off"
+    },
+    {
+      "name": "AtmGui",
+      "type": "gui",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atm_gui",
+      "path": "~/Items/Earthbound"
+    },
+    {
+      "name": "ATM",
+      "type": "block",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atm",
+      "path": "~/Items/Earthbound"
+    },
+    {
+      "name": "Earthbound",
+      "type": "tab",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "earthbound",
+      "path": "~/Items/Earthbound"
+    },
+    {
+      "name": "AtmGuiWhileThisGUIIsOpenTick",
+      "type": "procedure",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atm_gui_while_this_gui_is_open_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items/Earthbound"
+    },
+    {
+      "name": "ATMdeposit",
+      "type": "procedure",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "at_mdeposit",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items/Earthbound"
+    },
+    {
+      "name": "ATMwithdraw",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "at_mwithdraw",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Earthbound"
+    },
+    {
+      "name": "YourFather",
+      "type": "block",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "your_father",
+      "path": "~/Items/Earthbound"
+    },
+    {
+      "name": "YourFatherBlockValidPlacementCondition",
+      "type": "procedure",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "your_father_block_valid_placement_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Earthbound"
+    },
+    {
+      "name": "HalfMoneyOnDeath",
+      "type": "procedure",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "half_money_on_death",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items/Earthbound"
+    },
+    {
+      "name": "ConfusionAilmentOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "confusion_ailment_on_effect_active_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items/Earthbound"
+    },
+    {
+      "name": "ConfusionAilment",
+      "type": "potioneffect",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "confusion_ailment",
+      "path": "~/Items/Earthbound"
+    },
+    {
+      "name": "Confusion",
+      "type": "potion",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "confusion",
+      "path": "~/Items/Earthbound"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [
+    {
+      "name": "itemuse",
+      "files": [
+        "00_-_item1"
+      ],
+      "category": "player",
+      "subtitle": "Item used."
+    },
+    {
+      "name": "cowextract",
+      "files": [
+        "bloodyimpact",
+        "fleshimpact"
+      ],
+      "category": "neutral",
+      "subtitle": "Metal Extraction"
+    },
+    {
+      "name": "global",
+      "files": [
+        "global"
+      ],
+      "category": "neutral",
+      "subtitle": "Elsen speaking"
+    },
+    {
+      "name": "strike",
+      "files": [
+        "00_-_strike01",
+        "00_-_strike02",
+        "00_-_strike05",
+        "00_-_attack2"
+      ],
+      "category": "hostile",
+      "subtitle": "Strike"
+    },
+    {
+      "name": "cash_register",
+      "files": [
+        "buy2"
+      ],
+      "category": "neutral",
+      "subtitle": "Cash register ding"
+    },
+    {
+      "name": "robotstep",
+      "files": [
+        "robotstep"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "error",
+      "files": [
+        "error"
+      ],
+      "category": "neutral",
+      "subtitle": "error"
+    }
+  ],
+  "language_map": {
+    "en_us": {
+      "subtitles.robotstep": "",
+      "block.offmod.green_scrapped_metal": "Green Scrapped Metal",
+      "entity.offmod.troquantary": "Troquantary",
+      "item.offmod.troquantary_spawn_egg": "Troquantary Spawn Egg",
+      "item.offmod.molochs_meat": "Belial’s meat",
+      "subtitles.strike": "Strike",
+      "item.offmod.ashley_bat": "Ashley Bat",
+      "item.minecraft.tipped_arrow.effect.confusion": "Arrow of Confusion",
+      "item.offmod.elsens_pickaxe": "Elsen\u0027s Pickaxe",
+      "item.offmod.plastic_bucket": "Plastic Bucket",
+      "item.offmod.elsen_spawn_egg": "Elsen Spawn Egg",
+      "entity.offmod.pedalo": "Pedalo",
+      "block.offmod.atm": "ATM",
+      "item.offmod.pedalo_spawn_egg": "Pedalo Spawn Egg",
+      "fluid.offmod.meat": "Meat",
+      "item.minecraft.potion.effect.confusion": "Potion of Confusion",
+      "item.offmod.common_spectre_spawn_egg": "Common Spectre Spawn Egg",
+      "entity.offmod.common_spectre": "Common Spectre",
+      "entity.offmod.elsen": "Elsen",
+      "item.offmod.luck_ticket": "Luck Ticket",
+      "item.offmod.abaddons_meat": "Abaddon\u0027s Meat",
+      "block.offmod.your_father": "Your Father",
+      "item.minecraft.lingering_potion.effect.confusion": "Lingering Potion of Confusion",
+      "itemGroup.taboff": "OFF",
+      "item.offmod.bottle_of_smoke": "Bottle Of Smoke",
+      "itemGroup.tabearthbound": "Earthbound",
+      "block.offmod.plastic": "Liquid Plastic",
+      "item.minecraft.splash_potion.effect.confusion": "Splash Potion of Confusion",
+      "block.offmod.meat": "Meat",
+      "subtitles.cash_register": "Cash register ding",
+      "subtitles.global": "Elsen speaking",
+      "block.offmod.raw_metal": "Raw Metal",
+      "item.offmod.fortune_ticket": "Fortune Ticket",
+      "subtitles.cowextract": "Metal Extraction",
+      "fluid.offmod.plastic": "Liquid Plastic",
+      "item.offmod.meat_bucket": "Meat Bucket",
+      "subtitles.error": "error",
+      "subtitles.itemuse": "Item used.",
+      "effect.confusion_ailment": "Confusion"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Items",
+        "children": [
+          {
+            "name": "General",
+            "children": []
+          },
+          {
+            "name": "Equipment",
+            "children": [
+              {
+                "name": "Bats",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Earthbound",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Characters",
+        "children": [
+          {
+            "name": "Spectre",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Zones",
+        "children": [
+          {
+            "name": "Zone 0",
+            "children": []
+          },
+          {
+            "name": "Zone 1",
+            "children": []
+          },
+          {
+            "name": "Zone 2",
+            "children": []
+          },
+          {
+            "name": "Zone 3",
+            "children": []
+          },
+          {
+            "name": "The Room",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Elements",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "offmod",
+    "modName": "OFFmod",
+    "version": "1.0.0",
+    "author": "maxim, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.16.5",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.tyconxon.offmod",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202100354000
+}

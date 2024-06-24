@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "experience": 15,
+  "cookingtime": 200,
+  "ingredient": {
+    "item": "offmod:meat_bucket"
+  },
+  "result": {
+    "item": "offmod:abaddons_meat"
+  }
+}

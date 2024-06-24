@@ -1,0 +1,21 @@
+{
+  "_fv": 24,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of Confusion",
+    "splashName": "Splash Potion of Confusion",
+    "lingeringName": "Lingering Potion of Confusion",
+    "arrowName": "Arrow of Confusion",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:ConfusionAilment"
+        },
+        "duration": 3600,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

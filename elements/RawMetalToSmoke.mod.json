@@ -1,0 +1,20 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Campfire cooking",
+    "xpReward": 1.0,
+    "cookingTime": 100,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "campfireCookingInputStack": {
+      "value": "CUSTOM:RawMetal"
+    },
+    "campfireCookingReturnStack": {
+      "value": "CUSTOM:BottleOfSmoke"
+    },
+    "name": "raw_metal_to_smoke",
+    "namespace": "mod"
+  }
+}

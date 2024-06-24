@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "offmod:blocks/atm_bottom",
+    "up": "offmod:blocks/atm_top",
+    "north": "offmod:blocks/atm_front",
+    "east": "offmod:blocks/atm_front",
+    "south": "offmod:blocks/atm_back",
+    "west": "offmod:blocks/atm_side",
+    "particle": "offmod:blocks/atm_particle_b"
+  }
+}

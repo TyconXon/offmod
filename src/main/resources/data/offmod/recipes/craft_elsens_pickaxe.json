@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "offmod:raw_metal"
+    },
+    "2": {
+      "item": "offmod:raw_metal"
+    },
+    "3": {
+      "item": "offmod:raw_metal"
+    },
+    "4": {
+      "item": "minecraft:iron_nugget"
+    },
+    "5": {
+      "item": "offmod:raw_metal"
+    },
+    "7": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "result": {
+    "item": "offmod:elsens_pickaxe",
+    "count": 1
+  }
+}

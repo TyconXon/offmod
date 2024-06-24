@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "experience": 6,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "offmod:meat_bucket"
+  },
+  "result": {
+    "item": "offmod:molochs_meat"
+  }
+}

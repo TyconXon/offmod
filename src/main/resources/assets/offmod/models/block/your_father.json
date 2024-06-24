@@ -1,0 +1,8 @@
+{
+  "parent": "offmod:custom/dad",
+  "textures": {
+    "all": "offmod:blocks/texture_2",
+    "particle": "offmod:blocks/texture_2",
+    "0": "offmod:blocks/texture_2"
+  }
+}

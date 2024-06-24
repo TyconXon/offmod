@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "offmod:plastic",
+    "offmod:plastic_flowing",
+    "offmod:meat",
+    "offmod:meat_flowing"
+  ]
+}
