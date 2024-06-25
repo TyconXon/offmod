@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "offmod:blocks/atm_bottom",
+    "up": "offmod:blocks/grinder_top",
+    "north": "offmod:blocks/grinder_front",
+    "east": "offmod:blocks/grinder_side",
+    "south": "offmod:blocks/grinder_side",
+    "west": "offmod:blocks/grinder_side",
+    "particle": "offmod:blocks/atm_bottom"
+  }
+}

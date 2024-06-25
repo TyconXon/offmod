@@ -37,6 +37,7 @@ import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.CreatureAttribute;
+import net.minecraft.entity.AreaEffectCloudEntity;
 
 import java.util.stream.Stream;
 import java.util.Map;
@@ -74,6 +75,7 @@ public class PedaloEntity extends OffmodModElements.ModElement {
 			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 10);
 			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 0);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 3);
+			ammma = ammma.createMutableAttribute(Attributes.FOLLOW_RANGE, 16);
 			event.put(entity, ammma.create());
 		}
 	}
@@ -128,7 +130,7 @@ public class PedaloEntity extends OffmodModElements.ModElement {
 
 		@Override
 		public boolean attackEntityFrom(DamageSource source, float amount) {
-			if (source.getImmediateSource() instanceof PotionEntity)
+			if (source.getImmediateSource() instanceof PotionEntity || source.getImmediateSource() instanceof AreaEffectCloudEntity)
 				return false;
 			if (source == DamageSource.FALL)
 				return false;

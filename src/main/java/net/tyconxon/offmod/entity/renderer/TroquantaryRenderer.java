@@ -1,3 +1,4 @@
+
 package net.tyconxon.offmod.entity.renderer;
 
 import net.tyconxon.offmod.entity.TroquantaryEntity;
@@ -28,7 +29,7 @@ public class TroquantaryRenderer {
 
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
-						return new ResourceLocation("offmod:textures/texture_3.png");
+						return new ResourceLocation("offmod:textures/entities/texture_3.png");
 					}
 				};
 			});

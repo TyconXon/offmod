@@ -6,6 +6,7 @@ import net.tyconxon.offmod.OffmodModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
 
+import net.minecraft.item.UseAction;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
@@ -33,6 +34,11 @@ public class BottleOfSmokeItem extends OffmodModElements.ModElement {
 		}
 
 		@Override
+		public UseAction getUseAction(ItemStack itemstack) {
+			return UseAction.EAT;
+		}
+
+		@Override
 		public boolean hasContainerItem() {
 			return true;
 		}
@@ -44,11 +50,6 @@ public class BottleOfSmokeItem extends OffmodModElements.ModElement {
 
 		@Override
 		public int getItemEnchantability() {
-			return 0;
-		}
-
-		@Override
-		public int getUseDuration(ItemStack itemstack) {
 			return 0;
 		}
 

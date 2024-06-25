@@ -71,8 +71,9 @@ public class PlasticBlock extends OffmodModElements.ModElement {
 				FluidAttributes.builder(new ResourceLocation("offmod:blocks/plasticcalm"), new ResourceLocation("offmod:blocks/plasticcalm"))
 						.luminosity(0).density(1000).viscosity(1000).temperature(300)
 
-						.rarity(Rarity.COMMON)).explosionResistance(100f).canMultiply().tickRate(5).levelDecreasePerBlock(1).slopeFindDistance(4)
-								.bucket(() -> bucket).block(() -> block);
+						.rarity(Rarity.COMMON))
+				.explosionResistance(100f).canMultiply().tickRate(5).levelDecreasePerBlock(1).slopeFindDistance(4).bucket(() -> bucket)
+				.block(() -> block);
 		still = (FlowingFluid) new CustomFlowingFluid.Source(fluidproperties).setRegistryName("plastic");
 		flowing = (FlowingFluid) new CustomFlowingFluid.Flowing(fluidproperties).setRegistryName("plastic_flowing");
 		elements.blocks
@@ -84,7 +85,7 @@ public class PlasticBlock extends OffmodModElements.ModElement {
 				}.setRegistryName("plastic"));
 		elements.items.add(() -> new BucketItem(still,
 				new Item.Properties().containerItem(Items.BUCKET).maxStackSize(1).group(OFFItemGroup.tab).rarity(Rarity.COMMON))
-						.setRegistryName("plastic_bucket"));
+				.setRegistryName("plastic_bucket"));
 	}
 
 	public static abstract class CustomFlowingFluid extends ForgeFlowingFluid {

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "offmod:block/meat_grinder"
+    },
+    "facing=east": {
+      "model": "offmod:block/meat_grinder",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "offmod:block/meat_grinder",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "offmod:block/meat_grinder",
+      "y": 270
+    }
+  }
+}

@@ -1,3 +1,4 @@
+
 package net.tyconxon.offmod.entity.renderer;
 
 import net.tyconxon.offmod.entity.ElsenEntity;
@@ -24,7 +25,7 @@ public class ElsenRenderer {
 				BipedRenderer customRender = new BipedRenderer(renderManager, new BipedModel(0), 0.5f) {
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
-						return new ResourceLocation("offmod:textures/skin64x32.png");
+						return new ResourceLocation("offmod:textures/entities/skin64x32.png");
 					}
 				};
 				customRender.addLayer(new BipedArmorLayer(customRender, new BipedModel(0.5f), new BipedModel(1)));

@@ -9,20 +9,6 @@
       }
     ]
   },
-  "cowextract": {
-    "category": "neutral",
-    "subtitle": "subtitles.cowextract",
-    "sounds": [
-      {
-        "name": "offmod:bloodyimpact",
-        "stream": false
-      },
-      {
-        "name": "offmod:fleshimpact",
-        "stream": false
-      }
-    ]
-  },
   "global": {
     "category": "neutral",
     "subtitle": "subtitles.global",
@@ -80,6 +66,194 @@
     "sounds": [
       {
         "name": "offmod:error",
+        "stream": false
+      }
+    ]
+  },
+  "cowextract": {
+    "category": "neutral",
+    "subtitle": "subtitles.cowextract",
+    "sounds": [
+      {
+        "name": "offmod:bloodyimpact",
+        "stream": false
+      },
+      {
+        "name": "offmod:fleshimpact",
+        "stream": false
+      }
+    ]
+  },
+  "womp": {
+    "category": "voice",
+    "subtitle": "subtitles.womp",
+    "sounds": [
+      {
+        "name": "offmod:se_s37_wahp_1",
+        "stream": false
+      },
+      {
+        "name": "offmod:se_s37_wahp_2",
+        "stream": false
+      },
+      {
+        "name": "offmod:se_s37_wahp_3",
+        "stream": false
+      },
+      {
+        "name": "offmod:se_s37_wahp_4",
+        "stream": false
+      },
+      {
+        "name": "offmod:se_s37_wahp_5",
+        "stream": false
+      }
+    ]
+  },
+  "hylicshit": {
+    "category": "hostile",
+    "subtitle": "subtitles.hylicshit",
+    "sounds": [
+      {
+        "name": "offmod:decse_enemyhit2",
+        "stream": false
+      },
+      {
+        "name": "offmod:decse_enemyhit3",
+        "stream": false
+      },
+      {
+        "name": "offmod:decse_enemyhit4",
+        "stream": false
+      },
+      {
+        "name": "offmod:decse_enemyhit5",
+        "stream": false
+      },
+      {
+        "name": "offmod:decse_enemyhit6",
+        "stream": false
+      },
+      {
+        "name": "offmod:decse_enemyhit7",
+        "stream": false
+      },
+      {
+        "name": "offmod:decse_enemyhit8",
+        "stream": false
+      },
+      {
+        "name": "offmod:decse_enemyhit10",
+        "stream": false
+      },
+      {
+        "name": "offmod:decse_enemyhit11",
+        "stream": false
+      },
+      {
+        "name": "offmod:decse_softwhitenoisehit",
+        "stream": false
+      },
+      {
+        "name": "offmod:decse_enemyhit1",
+        "stream": false
+      },
+      {
+        "name": "offmod:decse_enemyhit9",
+        "stream": false
+      }
+    ]
+  },
+  "hylicsspeech": {
+    "category": "ambient",
+    "subtitle": "subtitles.hylicsspeech",
+    "sounds": [
+      {
+        "name": "offmod:speechse_1",
+        "stream": false
+      },
+      {
+        "name": "offmod:speechse_2",
+        "stream": false
+      },
+      {
+        "name": "offmod:speechse_3",
+        "stream": false
+      },
+      {
+        "name": "offmod:speechse_4",
+        "stream": false
+      },
+      {
+        "name": "offmod:speechse_5",
+        "stream": false
+      }
+    ]
+  },
+  "hylicsvuln": {
+    "category": "neutral",
+    "subtitle": "subtitles.hylicsvuln",
+    "sounds": [
+      {
+        "name": "offmod:se_breakglass_tinkle",
+        "stream": false
+      },
+      {
+        "name": "offmod:se_breakglass3",
+        "stream": false
+      }
+    ]
+  },
+  "hylicsshaker": {
+    "category": "hostile",
+    "subtitle": "subtitles.hylicsshaker",
+    "sounds": [
+      {
+        "name": "offmod:decse_shakerloophalf",
+        "stream": false
+      }
+    ]
+  },
+  "hylicspoolwine": {
+    "category": "neutral",
+    "subtitle": "subtitles.hylicspoolwine",
+    "sounds": [
+      {
+        "name": "offmod:decse_pour1",
+        "stream": false
+      },
+      {
+        "name": "offmod:decse_wineglassstrike1_fixed",
+        "stream": false
+      }
+    ]
+  },
+  "hylicscharge": {
+    "category": "neutral",
+    "subtitle": "subtitles.hylicscharge",
+    "sounds": [
+      {
+        "name": "offmod:se_s37_8",
+        "stream": false
+      }
+    ]
+  },
+  "hylicsphone": {
+    "category": "hostile",
+    "subtitle": "subtitles.hylicsphone",
+    "sounds": [
+      {
+        "name": "offmod:se_phone",
+        "stream": false
+      }
+    ]
+  },
+  "hylicscream": {
+    "category": "neutral",
+    "subtitle": "subtitles.hylicscream",
+    "sounds": [
+      {
+        "name": "offmod:dec18se_shavecream",
         "stream": false
       }
     ]

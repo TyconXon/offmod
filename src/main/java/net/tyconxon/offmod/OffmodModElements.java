@@ -47,13 +47,23 @@ public class OffmodModElements {
 
 	public OffmodModElements() {
 		sounds.put(new ResourceLocation("offmod", "itemuse"), new net.minecraft.util.SoundEvent(new ResourceLocation("offmod", "itemuse")));
-		sounds.put(new ResourceLocation("offmod", "cowextract"), new net.minecraft.util.SoundEvent(new ResourceLocation("offmod", "cowextract")));
 		sounds.put(new ResourceLocation("offmod", "global"), new net.minecraft.util.SoundEvent(new ResourceLocation("offmod", "global")));
 		sounds.put(new ResourceLocation("offmod", "strike"), new net.minecraft.util.SoundEvent(new ResourceLocation("offmod", "strike")));
 		sounds.put(new ResourceLocation("offmod", "cash_register"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("offmod", "cash_register")));
 		sounds.put(new ResourceLocation("offmod", "robotstep"), new net.minecraft.util.SoundEvent(new ResourceLocation("offmod", "robotstep")));
 		sounds.put(new ResourceLocation("offmod", "error"), new net.minecraft.util.SoundEvent(new ResourceLocation("offmod", "error")));
+		sounds.put(new ResourceLocation("offmod", "cowextract"), new net.minecraft.util.SoundEvent(new ResourceLocation("offmod", "cowextract")));
+		sounds.put(new ResourceLocation("offmod", "womp"), new net.minecraft.util.SoundEvent(new ResourceLocation("offmod", "womp")));
+		sounds.put(new ResourceLocation("offmod", "hylicshit"), new net.minecraft.util.SoundEvent(new ResourceLocation("offmod", "hylicshit")));
+		sounds.put(new ResourceLocation("offmod", "hylicsspeech"), new net.minecraft.util.SoundEvent(new ResourceLocation("offmod", "hylicsspeech")));
+		sounds.put(new ResourceLocation("offmod", "hylicsvuln"), new net.minecraft.util.SoundEvent(new ResourceLocation("offmod", "hylicsvuln")));
+		sounds.put(new ResourceLocation("offmod", "hylicsshaker"), new net.minecraft.util.SoundEvent(new ResourceLocation("offmod", "hylicsshaker")));
+		sounds.put(new ResourceLocation("offmod", "hylicspoolwine"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("offmod", "hylicspoolwine")));
+		sounds.put(new ResourceLocation("offmod", "hylicscharge"), new net.minecraft.util.SoundEvent(new ResourceLocation("offmod", "hylicscharge")));
+		sounds.put(new ResourceLocation("offmod", "hylicsphone"), new net.minecraft.util.SoundEvent(new ResourceLocation("offmod", "hylicsphone")));
+		sounds.put(new ResourceLocation("offmod", "hylicscream"), new net.minecraft.util.SoundEvent(new ResourceLocation("offmod", "hylicscream")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("offmod").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();

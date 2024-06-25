@@ -34,24 +34,6 @@
       "path": "~/Items/General"
     },
     {
-      "name": "LuckTicket",
-      "type": "food",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "luck_ticket",
-      "path": "~/Items/General"
-    },
-    {
-      "name": "FortuneTicket",
-      "type": "food",
-      "sortid": 2,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fortune_ticket",
-      "path": "~/Items/General"
-    },
-    {
       "name": "FortuneTicketUsed",
       "type": "procedure",
       "sortid": 3,
@@ -118,15 +100,6 @@
       "path": "~/Items/General"
     },
     {
-      "name": "MolochsMeat",
-      "type": "food",
-      "sortid": 4,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "molochs_meat",
-      "path": "~/Items/General"
-    },
-    {
       "name": "AbaddonsMeatFoodEaten",
       "type": "procedure",
       "sortid": 5,
@@ -157,15 +130,6 @@
           }
         ]
       },
-      "path": "~/Items/General"
-    },
-    {
-      "name": "AbaddonsMeat",
-      "type": "food",
-      "sortid": 5,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "abaddons_meat",
       "path": "~/Items/General"
     },
     {
@@ -633,6 +597,443 @@
       "locked_code": false,
       "registry_name": "confusion",
       "path": "~/Items/Earthbound"
+    },
+    {
+      "name": "LuckTicket",
+      "type": "item",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "luck_ticket",
+      "path": "~/Items/General"
+    },
+    {
+      "name": "FortuneTicket",
+      "type": "item",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fortune_ticket",
+      "path": "~/Items/General"
+    },
+    {
+      "name": "MolochsMeat",
+      "type": "item",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "molochs_meat",
+      "path": "~/Items/General"
+    },
+    {
+      "name": "AbaddonsMeat",
+      "type": "item",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "abaddons_meat",
+      "path": "~/Items/General"
+    },
+    {
+      "name": "Mania",
+      "type": "potioneffect",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mania",
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "StunnedOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stunned_on_effect_active_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "Stunned",
+      "type": "potioneffect",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stunned",
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "ManiaHit",
+      "type": "procedure",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mania_hit",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "ManiaEffectExpires",
+      "type": "procedure",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mania_effect_expires",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "ManiaOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mania_on_effect_active_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "Poolwine",
+      "type": "potion",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poolwine",
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "Vulnerable",
+      "type": "potioneffect",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vulnerable",
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "VulnerableHit",
+      "type": "procedure",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vulnerable_hit",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "Afterlife",
+      "type": "biome",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "afterlife",
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "MeatGrinderOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meat_grinder_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "MeatGrinder",
+      "type": "block",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meat_grinder",
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "Tiburce",
+      "type": "livingentity",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tiburce",
+      "path": "~/Characters/Spectre"
+    },
+    {
+      "name": "TiburceEntityIsHurt",
+      "type": "procedure",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tiburce_entity_is_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Characters/Spectre"
+    },
+    {
+      "name": "Laugh",
+      "type": "livingentity",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "laugh",
+      "path": "~/Characters/Spectre"
+    },
+    {
+      "name": "BurntEntityShakingCondition",
+      "type": "procedure",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burnt_entity_shaking_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Characters/Spectre"
+    },
+    {
+      "name": "BurntOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burnt_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Characters/Spectre"
+    },
+    {
+      "name": "Burnt",
+      "type": "livingentity",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burnt",
+      "path": "~/Characters/Spectre"
+    },
+    {
+      "name": "PhoneCall",
+      "type": "particle",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phone_call",
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "TyroRightClickedOnEntity",
+      "type": "procedure",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tyro_right_clicked_on_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "Tyro",
+      "type": "livingentity",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tyro",
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "ManiaEffectStartedapplied",
+      "type": "procedure",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mania_effect_startedapplied",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "Vulnerability",
+      "type": "potion",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vulnerability",
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "VulnerableEffectStartedapplied",
+      "type": "procedure",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vulnerable_effect_startedapplied",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "VulnerablePersistance",
+      "type": "gamerule",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vulnerablePersistance",
+      "metadata": {
+        "type": "number"
+      },
+      "path": "~/Items/Hylics"
     }
   ],
   "variable_elements": [],
@@ -644,15 +1045,6 @@
       ],
       "category": "player",
       "subtitle": "Item used."
-    },
-    {
-      "name": "cowextract",
-      "files": [
-        "bloodyimpact",
-        "fleshimpact"
-      ],
-      "category": "neutral",
-      "subtitle": "Metal Extraction"
     },
     {
       "name": "global",
@@ -696,6 +1088,108 @@
       ],
       "category": "neutral",
       "subtitle": "error"
+    },
+    {
+      "name": "cowextract",
+      "files": [
+        "bloodyimpact",
+        "fleshimpact"
+      ],
+      "category": "neutral",
+      "subtitle": "Metal Extraction"
+    },
+    {
+      "name": "womp",
+      "files": [
+        "se_s37_wahp_1",
+        "se_s37_wahp_2",
+        "se_s37_wahp_3",
+        "se_s37_wahp_4",
+        "se_s37_wahp_5"
+      ],
+      "category": "voice",
+      "subtitle": "Womp (Death)"
+    },
+    {
+      "name": "hylicshit",
+      "files": [
+        "decse_enemyhit2",
+        "decse_enemyhit3",
+        "decse_enemyhit4",
+        "decse_enemyhit5",
+        "decse_enemyhit6",
+        "decse_enemyhit7",
+        "decse_enemyhit8",
+        "decse_enemyhit10",
+        "decse_enemyhit11",
+        "decse_softwhitenoisehit",
+        "decse_enemyhit1",
+        "decse_enemyhit9"
+      ],
+      "category": "hostile",
+      "subtitle": "Hylics-type entity hit"
+    },
+    {
+      "name": "hylicsspeech",
+      "files": [
+        "speechse_1",
+        "speechse_2",
+        "speechse_3",
+        "speechse_4",
+        "speechse_5"
+      ],
+      "category": "ambient",
+      "subtitle": "Hylics-entity speech"
+    },
+    {
+      "name": "hylicsvuln",
+      "files": [
+        "se_breakglass_tinkle",
+        "se_breakglass3"
+      ],
+      "category": "neutral",
+      "subtitle": "Entity vulnerable "
+    },
+    {
+      "name": "hylicsshaker",
+      "files": [
+        "decse_shakerloophalf"
+      ],
+      "category": "hostile",
+      "subtitle": "Hylics-entity prepares"
+    },
+    {
+      "name": "hylicspoolwine",
+      "files": [
+        "decse_pour1",
+        "decse_wineglassstrike1_fixed"
+      ],
+      "category": "neutral",
+      "subtitle": "Poolwine consumed"
+    },
+    {
+      "name": "hylicscharge",
+      "files": [
+        "se_s37_8"
+      ],
+      "category": "neutral",
+      "subtitle": "Hylics-entity Charge Up"
+    },
+    {
+      "name": "hylicsphone",
+      "files": [
+        "se_phone"
+      ],
+      "category": "hostile",
+      "subtitle": "Ring ring! (Hylics-entity calling for help)"
+    },
+    {
+      "name": "hylicscream",
+      "files": [
+        "dec18se_shavecream"
+      ],
+      "category": "neutral",
+      "subtitle": "Spraying shaving cream"
     }
   ],
   "language_map": {
@@ -703,42 +1197,74 @@
       "subtitles.robotstep": "",
       "block.offmod.green_scrapped_metal": "Green Scrapped Metal",
       "entity.offmod.troquantary": "Troquantary",
-      "item.offmod.troquantary_spawn_egg": "Troquantary Spawn Egg",
-      "item.offmod.molochs_meat": "Belial’s meat",
-      "subtitles.strike": "Strike",
-      "item.offmod.ashley_bat": "Ashley Bat",
+      "item.offmod.laugh_spawn_egg": "AhAh! Spawn Egg",
+      "item.minecraft.potion.effect.vulnerability": "Potion of Vulnerability",
+      "entity.offmod.tiburce": "Tiburce",
+      "biome.offmod.afterlife": "Afterlife",
+      "item.offmod.molochs_meat": "Belialï¿½s meat",
+      "entity.offmod.laugh": "AhAh!",
+      "entity.offmod.burnt": "Incendie [Burnt]",
       "item.minecraft.tipped_arrow.effect.confusion": "Arrow of Confusion",
       "item.offmod.elsens_pickaxe": "Elsen\u0027s Pickaxe",
-      "item.offmod.plastic_bucket": "Plastic Bucket",
-      "item.offmod.elsen_spawn_egg": "Elsen Spawn Egg",
-      "entity.offmod.pedalo": "Pedalo",
+      "entity.offmod.tyro": "Tyro",
       "block.offmod.atm": "ATM",
+      "subtitles.hylicshit": "Hylics-type entity hit",
+      "subtitles.hylicscream": "Spraying shaving cream",
+      "subtitles.hylicspoolwine": "Poolwine consumed",
+      "item.offmod.common_spectre_spawn_egg": "Common Spectre Spawn Egg",
+      "block.offmod.your_father": "Your Father",
+      "item.minecraft.lingering_potion.effect.confusion": "Lingering Potion of Confusion",
+      "block.offmod.meat_grinder": "Meat Grinder",
+      "itemGroup.taboff": "OFF",
+      "gamerule.vulnerablePersistance.description": "How many hits will the Vulnerability effect persist through?",
+      "item.offmod.tyro_spawn_egg": "Tyro Spawn Egg",
+      "item.minecraft.splash_potion.effect.confusion": "Splash Potion of Confusion",
+      "block.offmod.plastic": "Liquid Plastic",
+      "block.offmod.meat": "Meat",
+      "item.minecraft.tipped_arrow.effect.poolwine": "Poolwine Arrow",
+      "effect.stunned": "Stunned",
+      "item.minecraft.potion.effect.poolwine": "Poolwine",
+      "block.offmod.raw_metal": "Raw Metal",
+      "item.minecraft.lingering_potion.effect.vulnerability": "Lingering Potion of Vulnerability",
+      "item.minecraft.splash_potion.effect.poolwine": "Poolwine Splash",
+      "subtitles.hylicsshaker": "Hylics-entity prepares",
+      "subtitles.cowextract": "Metal Extraction",
+      "fluid.offmod.plastic": "Liquid Plastic",
+      "gamerule.vulnerablePersistance": "Vulnerability Persisting Hits:",
+      "subtitles.womp": "Womp (Death)",
+      "subtitles.error": "error",
+      "effect.confusion_ailment": "Confusion",
+      "subtitles.hylicsphone": "Ring ring! (Hylics-entity calling for help)",
+      "subtitles.hylicscharge": "Hylics-entity Charge Up",
+      "item.offmod.troquantary_spawn_egg": "Troquantary Spawn Egg",
+      "subtitles.strike": "Strike",
+      "item.offmod.ashley_bat": "Ashley Bat",
+      "item.minecraft.splash_potion.effect.vulnerability": "Splash Potion of Vulnerability",
+      "subtitles.hylicsvuln": "Entity vulnerable ",
+      "item.offmod.plastic_bucket": "Plastic Bucket",
+      "item.offmod.burnt_spawn_egg": "Incendie [Burnt] Spawn Egg",
+      "entity.offmod.pedalo": "Pedalo",
+      "item.offmod.elsen_spawn_egg": "Elsen Spawn Egg",
       "item.offmod.pedalo_spawn_egg": "Pedalo Spawn Egg",
       "fluid.offmod.meat": "Meat",
       "item.minecraft.potion.effect.confusion": "Potion of Confusion",
-      "item.offmod.common_spectre_spawn_egg": "Common Spectre Spawn Egg",
+      "effect.mania": "Mania",
       "entity.offmod.common_spectre": "Common Spectre",
       "entity.offmod.elsen": "Elsen",
       "item.offmod.luck_ticket": "Luck Ticket",
       "item.offmod.abaddons_meat": "Abaddon\u0027s Meat",
-      "block.offmod.your_father": "Your Father",
-      "item.minecraft.lingering_potion.effect.confusion": "Lingering Potion of Confusion",
-      "itemGroup.taboff": "OFF",
+      "item.minecraft.lingering_potion.effect.poolwine": "Lingering Poolwine Splash",
+      "item.minecraft.tipped_arrow.effect.vulnerability": "Arrow of Vulnerability",
       "item.offmod.bottle_of_smoke": "Bottle Of Smoke",
-      "itemGroup.tabearthbound": "Earthbound",
-      "block.offmod.plastic": "Liquid Plastic",
-      "item.minecraft.splash_potion.effect.confusion": "Splash Potion of Confusion",
-      "block.offmod.meat": "Meat",
+      "itemGroup.tabearthbound": "OtherRPG",
+      "effect.vulnerable": "Vulnerable",
       "subtitles.cash_register": "Cash register ding",
       "subtitles.global": "Elsen speaking",
-      "block.offmod.raw_metal": "Raw Metal",
       "item.offmod.fortune_ticket": "Fortune Ticket",
-      "subtitles.cowextract": "Metal Extraction",
-      "fluid.offmod.plastic": "Liquid Plastic",
+      "subtitles.hylicsspeech": "Hylics-entity speech",
       "item.offmod.meat_bucket": "Meat Bucket",
-      "subtitles.error": "error",
       "subtitles.itemuse": "Item used.",
-      "effect.confusion_ailment": "Confusion"
+      "item.offmod.tiburce_spawn_egg": "Tiburce Spawn Egg"
     }
   },
   "foldersRoot": {
@@ -762,6 +1288,14 @@
           },
           {
             "name": "Earthbound",
+            "children": []
+          },
+          {
+            "name": "Hylics",
+            "children": []
+          },
+          {
+            "name": "Forknife",
             "children": []
           }
         ]
@@ -824,5 +1358,5 @@
     "modElementsPackage": "net.tyconxon.offmod",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202100354000
+  "mcreatorVersion": 202200234517
 }

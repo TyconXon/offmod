@@ -1,0 +1,21 @@
+{
+  "_fv": 33,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Poolwine",
+    "splashName": "Poolwine Splash",
+    "lingeringName": "Lingering Poolwine Splash",
+    "arrowName": "Poolwine Arrow",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:Mania"
+        },
+        "duration": 1200,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

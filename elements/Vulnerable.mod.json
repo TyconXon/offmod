@@ -1,0 +1,17 @@
+{
+  "_fv": 33,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Vulnerable",
+    "icon": "fragility.png",
+    "color": {
+      "value": -11260606,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": true,
+    "isBenefitical": false,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true
+  }
+}

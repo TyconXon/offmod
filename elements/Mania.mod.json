@@ -1,0 +1,26 @@
+{
+  "_fv": 33,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Mania",
+    "icon": "maniaeffect.png",
+    "color": {
+      "value": -3397110,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "ManiaEffectStartedapplied"
+    },
+    "onActiveTick": {
+      "name": "ManiaOnEffectActiveTick"
+    },
+    "onExpired": {
+      "name": "ManiaEffectExpires"
+    }
+  }
+}

@@ -41,7 +41,7 @@ public class AtmGuiGuiWindow extends ContainerScreen<AtmGuiGui.GuiContainerMod> 
 		this.ySize = 180;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("offmod:textures/atm_gui.png");
+	private static final ResourceLocation texture = new ResourceLocation("offmod:textures/screens/atm_gui.png");
 
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {

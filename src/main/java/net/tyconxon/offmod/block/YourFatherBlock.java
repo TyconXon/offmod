@@ -135,27 +135,19 @@ public class YourFatherBlock extends OffmodModElements.ModElement {
 			switch ((Direction) state.get(FACING)) {
 				case SOUTH :
 				default :
-					return VoxelShapes.or(makeCuboidShape(12, 0, 12, 5, 8, 5)
-
-					)
+					return VoxelShapes.or(makeCuboidShape(12, 0, 12, 5, 8, 5))
 
 							.withOffset(offset.x, offset.y, offset.z);
 				case NORTH :
-					return VoxelShapes.or(makeCuboidShape(4, 0, 4, 11, 8, 11)
-
-					)
+					return VoxelShapes.or(makeCuboidShape(4, 0, 4, 11, 8, 11))
 
 							.withOffset(offset.x, offset.y, offset.z);
 				case EAST :
-					return VoxelShapes.or(makeCuboidShape(12, 0, 4, 5, 8, 11)
-
-					)
+					return VoxelShapes.or(makeCuboidShape(12, 0, 4, 5, 8, 11))
 
 							.withOffset(offset.x, offset.y, offset.z);
 				case WEST :
-					return VoxelShapes.or(makeCuboidShape(4, 0, 12, 11, 8, 5)
-
-					)
+					return VoxelShapes.or(makeCuboidShape(4, 0, 12, 11, 8, 5))
 
 							.withOffset(offset.x, offset.y, offset.z);
 			}
@@ -166,18 +158,18 @@ public class YourFatherBlock extends OffmodModElements.ModElement {
 			builder.add(FACING, WATERLOGGED);
 		}
 
+		@Override
+		public BlockState getStateForPlacement(BlockItemUseContext context) {
+			boolean flag = context.getWorld().getFluidState(context.getPos()).getFluid() == Fluids.WATER;
+			return this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing().getOpposite()).with(WATERLOGGED, flag);
+		}
+
 		public BlockState rotate(BlockState state, Rotation rot) {
 			return state.with(FACING, rot.rotate(state.get(FACING)));
 		}
 
 		public BlockState mirror(BlockState state, Mirror mirrorIn) {
 			return state.rotate(mirrorIn.toRotation(state.get(FACING)));
-		}
-
-		@Override
-		public BlockState getStateForPlacement(BlockItemUseContext context) {
-			boolean flag = context.getWorld().getFluidState(context.getPos()).getFluid() == Fluids.WATER;;
-			return this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing().getOpposite()).with(WATERLOGGED, flag);
 		}
 
 		@Override

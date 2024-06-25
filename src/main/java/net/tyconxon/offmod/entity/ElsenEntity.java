@@ -1,6 +1,7 @@
 
 package net.tyconxon.offmod.entity;
 
+import net.tyconxon.offmod.itemgroup.OFFItemGroup;
 import net.tyconxon.offmod.item.ElsensPickaxeItem;
 import net.tyconxon.offmod.entity.renderer.ElsenRenderer;
 import net.tyconxon.offmod.block.RawMetalBlock;
@@ -22,7 +23,6 @@ import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.passive.CowEntity;
@@ -44,6 +44,7 @@ import net.minecraft.entity.ai.goal.AvoidEntityGoal;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.MobEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.CreatureEntity;
@@ -66,7 +67,7 @@ public class ElsenEntity extends OffmodModElements.ModElement {
 	public void initElements() {
 		elements.entities.add(() -> entity);
 		elements.items
-				.add(() -> new SpawnEggItem(entity, -1, -16777216, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("elsen_spawn_egg"));
+				.add(() -> new SpawnEggItem(entity, -1, -16777216, new Item.Properties().group(OFFItemGroup.tab)).setRegistryName("elsen_spawn_egg"));
 	}
 
 	@Override
@@ -81,6 +82,7 @@ public class ElsenEntity extends OffmodModElements.ModElement {
 			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 10);
 			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 0);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 3);
+			ammma = ammma.createMutableAttribute(Attributes.FOLLOW_RANGE, 16);
 			event.put(entity, ammma.create());
 		}
 	}
@@ -111,8 +113,13 @@ public class ElsenEntity extends OffmodModElements.ModElement {
 			this.goalSelector.addGoal(3, new AvoidEntityGoal(this, CommonSpectreEntity.CustomEntity.class, (float) 6, 1.25, 1.1));
 			this.goalSelector.addGoal(4, new BreakBlockGoal(Blocks.SUGAR_CANE, this, 1, (int) 3));
 			this.goalSelector.addGoal(5, new BreakBlockGoal(RawMetalBlock.block, this, 1, (int) 3));
-			this.targetSelector.addGoal(6, new HurtByTargetGoal(this).setCallsForHelp(this.getClass()));
-			this.goalSelector.addGoal(7, new MeleeAttackGoal(this, 0.9, false));
+			this.targetSelector.addGoal(6, new HurtByTargetGoal(this).setCallsForHelp());
+			this.goalSelector.addGoal(7, new MeleeAttackGoal(this, 0.9, false) {
+				@Override
+				protected double getAttackReachSqr(LivingEntity entity) {
+					return (double) (4.0 + entity.getWidth() * entity.getWidth());
+				}
+			});
 			this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, CowEntity.class, true, true));
 			this.goalSelector.addGoal(9, new SwimGoal(this));
 			this.goalSelector.addGoal(10, new WaterAvoidingRandomWalkingGoal(this, 0.8));

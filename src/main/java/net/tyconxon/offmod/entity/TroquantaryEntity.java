@@ -1,6 +1,7 @@
 
 package net.tyconxon.offmod.entity;
 
+import net.tyconxon.offmod.itemgroup.OFFItemGroup;
 import net.tyconxon.offmod.entity.renderer.TroquantaryRenderer;
 import net.tyconxon.offmod.OffmodModElements;
 
@@ -22,18 +23,18 @@ import net.minecraft.pathfinding.SwimmerPathNavigator;
 import net.minecraft.pathfinding.PathNodeType;
 import net.minecraft.network.IPacket;
 import net.minecraft.item.SpawnEggItem;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.monster.MonsterEntity;
-import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.RandomSwimmingGoal;
 import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
 import net.minecraft.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.entity.ai.goal.LookRandomlyGoal;
 import net.minecraft.entity.ai.controller.MovementController;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.MobEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.CreatureAttribute;
@@ -54,7 +55,7 @@ public class TroquantaryEntity extends OffmodModElements.ModElement {
 	public void initElements() {
 		elements.entities.add(() -> entity);
 		elements.items.add(
-				() -> new SpawnEggItem(entity, -1, -2941410, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("troquantary_spawn_egg"));
+				() -> new SpawnEggItem(entity, -1, -2941410, new Item.Properties().group(OFFItemGroup.tab)).setRegistryName("troquantary_spawn_egg"));
 	}
 
 	@Override
@@ -66,9 +67,10 @@ public class TroquantaryEntity extends OffmodModElements.ModElement {
 		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
 			AttributeModifierMap.MutableAttribute ammma = MobEntity.func_233666_p_();
 			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.3);
-			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 7);
+			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 12);
 			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 0);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 5);
+			ammma = ammma.createMutableAttribute(Attributes.FOLLOW_RANGE, 16);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_KNOCKBACK, 1);
 			ammma = ammma.createMutableAttribute(ForgeMod.SWIM_SPEED.get(), 0.3);
 			event.put(entity, ammma.create());
@@ -128,11 +130,16 @@ public class TroquantaryEntity extends OffmodModElements.ModElement {
 		@Override
 		protected void registerGoals() {
 			super.registerGoals();
-			this.goalSelector.addGoal(1, new SwimGoal(this));
-			this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, PlayerEntity.class, true, false));
-			this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, ElsenEntity.CustomEntity.class, true, true));
-			this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1.2, false));
-			this.goalSelector.addGoal(5, new RandomSwimmingGoal(this, 1, 40));
+			this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, PlayerEntity.class, true, false));
+			this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, ElsenEntity.CustomEntity.class, true, true));
+			this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.2, true) {
+				@Override
+				protected double getAttackReachSqr(LivingEntity entity) {
+					return (double) (4.0 + entity.getWidth() * entity.getWidth());
+				}
+			});
+			this.goalSelector.addGoal(4, new RandomSwimmingGoal(this, 1, 40));
+			this.goalSelector.addGoal(5, new LookRandomlyGoal(this));
 		}
 
 		@Override

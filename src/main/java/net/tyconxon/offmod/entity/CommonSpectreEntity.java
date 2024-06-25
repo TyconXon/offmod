@@ -1,6 +1,7 @@
 
 package net.tyconxon.offmod.entity;
 
+import net.tyconxon.offmod.itemgroup.OFFItemGroup;
 import net.tyconxon.offmod.entity.renderer.CommonSpectreRenderer;
 import net.tyconxon.offmod.OffmodModElements;
 
@@ -22,7 +23,6 @@ import net.minecraft.network.IPacket;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.monster.MonsterEntity;
@@ -58,7 +58,7 @@ public class CommonSpectreEntity extends OffmodModElements.ModElement {
 	@Override
 	public void initElements() {
 		elements.entities.add(() -> entity);
-		elements.items.add(() -> new SpawnEggItem(entity, -2960686, -1, new Item.Properties().group(ItemGroup.MISC))
+		elements.items.add(() -> new SpawnEggItem(entity, -2960686, -1, new Item.Properties().group(OFFItemGroup.tab))
 				.setRegistryName("common_spectre_spawn_egg"));
 	}
 
@@ -74,6 +74,7 @@ public class CommonSpectreEntity extends OffmodModElements.ModElement {
 			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 4);
 			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 0);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 4);
+			ammma = ammma.createMutableAttribute(Attributes.FOLLOW_RANGE, 16);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_KNOCKBACK, 0.1);
 			ammma = ammma.createMutableAttribute(Attributes.FLYING_SPEED, 0.25);
 			event.put(entity, ammma.create());
@@ -141,7 +142,12 @@ public class CommonSpectreEntity extends OffmodModElements.ModElement {
 					}
 				}
 			});
-			this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2, false));
+			this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2, false) {
+				@Override
+				protected double getAttackReachSqr(LivingEntity entity) {
+					return (double) (4.0 + entity.getWidth() * entity.getWidth());
+				}
+			});
 			this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, ElsenEntity.CustomEntity.class, true, true));
 			this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, false));
 			this.goalSelector.addGoal(5, new RandomWalkingGoal(this, 1.2, 20) {

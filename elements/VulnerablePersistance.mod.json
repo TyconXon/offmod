@@ -1,0 +1,12 @@
+{
+  "_fv": 33,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Number",
+    "displayName": "Vulnerability Persisting Hits:",
+    "description": "How many hits will the Vulnerability effect persist through?",
+    "category": "PLAYER",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 1
+  }
+}

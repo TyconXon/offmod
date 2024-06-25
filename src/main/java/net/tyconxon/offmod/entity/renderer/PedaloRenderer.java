@@ -1,3 +1,4 @@
+
 package net.tyconxon.offmod.entity.renderer;
 
 import net.tyconxon.offmod.entity.PedaloEntity;
@@ -28,7 +29,7 @@ public class PedaloRenderer {
 
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {
-						return new ResourceLocation("offmod:textures/pedalo.png");
+						return new ResourceLocation("offmod:textures/entities/pedalo.png");
 					}
 				};
 			});

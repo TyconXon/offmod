@@ -66,9 +66,10 @@ public class MeatBlock extends OffmodModElements.ModElement {
 				FluidAttributes.builder(new ResourceLocation("offmod:blocks/meat"), new ResourceLocation("offmod:blocks/meat")).luminosity(0)
 						.density(2000).viscosity(1700).temperature(310)
 
-						.rarity(Rarity.COMMON)).explosionResistance(100f)
+						.rarity(Rarity.COMMON))
+				.explosionResistance(100f)
 
-								.tickRate(20).levelDecreasePerBlock(1).slopeFindDistance(3).bucket(() -> bucket).block(() -> block);
+				.tickRate(20).levelDecreasePerBlock(1).slopeFindDistance(3).bucket(() -> bucket).block(() -> block);
 		still = (FlowingFluid) new ForgeFlowingFluid.Source(fluidproperties).setRegistryName("meat");
 		flowing = (FlowingFluid) new ForgeFlowingFluid.Flowing(fluidproperties).setRegistryName("meat_flowing");
 		elements.blocks
@@ -80,6 +81,6 @@ public class MeatBlock extends OffmodModElements.ModElement {
 				}.setRegistryName("meat"));
 		elements.items.add(() -> new BucketItem(still,
 				new Item.Properties().containerItem(Items.BUCKET).maxStackSize(1).group(OFFItemGroup.tab).rarity(Rarity.COMMON))
-						.setRegistryName("meat_bucket"));
+				.setRegistryName("meat_bucket"));
 	}
 }

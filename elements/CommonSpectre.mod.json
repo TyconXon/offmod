@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 33,
   "_type": "livingentity",
   "definition": {
     "mobName": "Common Spectre",
@@ -21,7 +21,7 @@
       "falpha": 0.0
     },
     "creativeTab": {
-      "value": "MISC"
+      "value": "CUSTOM:OFF"
     },
     "isBoss": false,
     "bossBarColor": "PINK",
@@ -52,6 +52,7 @@
     "movementSpeed": 0.25,
     "armorBaseValue": 0.0,
     "trackingRange": 64,
+    "followRange": 16,
     "health": 4,
     "xpAmount": 2,
     "waterMob": false,

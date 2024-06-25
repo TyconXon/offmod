@@ -1,0 +1,118 @@
+{
+  "_fv": 33,
+  "_type": "biome",
+  "definition": {
+    "name": "Afterlife",
+    "groundBlock": {
+      "value": "Blocks.END_STONE"
+    },
+    "undergroundBlock": {
+      "value": "Blocks.STONE#1"
+    },
+    "underwaterBlock": {
+      "value": "Blocks.SAND#0"
+    },
+    "airColor": {
+      "value": -1795163,
+      "falpha": 0.0
+    },
+    "grassColor": {
+      "value": -3096656,
+      "falpha": 0.0
+    },
+    "foliageColor": {
+      "value": -3096656,
+      "falpha": 0.0
+    },
+    "waterColor": {
+      "value": -691581,
+      "falpha": 0.0
+    },
+    "waterFogColor": {
+      "value": -2864804,
+      "falpha": 0.0
+    },
+    "ambientSound": {
+      "value": ""
+    },
+    "additionsSound": {
+      "value": ""
+    },
+    "music": {
+      "value": ""
+    },
+    "moodSound": {
+      "value": ""
+    },
+    "moodSoundDelay": 6000,
+    "spawnParticles": true,
+    "particleToSpawn": {
+      "value": "SOUL"
+    },
+    "particlesProbability": 0.5,
+    "biomeCategory": "MUSHROOM",
+    "rainingPossibility": 0.5,
+    "temperature": 0.5,
+    "baseHeight": 0.1,
+    "heightVariation": 0.6,
+    "spawnBiome": true,
+    "spawnBiomeNether": false,
+    "spawnInCaves": false,
+    "biomeWeight": 1,
+    "biomeDictionaryTypes": [
+      "MUSHROOM",
+      "RARE"
+    ],
+    "grassPerChunk": 0,
+    "seagrassPerChunk": 0,
+    "flowersPerChunk": 0,
+    "mushroomsPerChunk": 5,
+    "bigMushroomsChunk": 0,
+    "sandPatchesPerChunk": 6,
+    "gravelPatchesPerChunk": 2,
+    "reedsPerChunk": 0,
+    "cactiPerChunk": 0,
+    "treesPerChunk": 1,
+    "vanillaTreeType": "Big trees",
+    "treeType": 1,
+    "minHeight": 10,
+    "treeStem": {
+      "value": "Blocks.STONE#5"
+    },
+    "treeBranch": {
+      "value": "Blocks.AIR"
+    },
+    "treeVines": {
+      "value": "Blocks.AIR"
+    },
+    "treeFruits": {
+      "value": "Blocks.AIR"
+    },
+    "spawnStronghold": false,
+    "spawnMineshaft": true,
+    "spawnMineshaftMesa": true,
+    "spawnPillagerOutpost": false,
+    "villageType": "none",
+    "spawnWoodlandMansion": false,
+    "spawnJungleTemple": false,
+    "spawnDesertPyramid": false,
+    "spawnSwampHut": false,
+    "spawnIgloo": false,
+    "spawnOceanMonument": false,
+    "spawnShipwreck": true,
+    "spawnShipwreckBeached": true,
+    "spawnBuriedTreasure": true,
+    "oceanRuinType": "WARM",
+    "spawnNetherBridge": false,
+    "spawnNetherFossil": false,
+    "spawnBastionRemnant": false,
+    "spawnEndCity": false,
+    "spawnRuinedPortal": "NONE",
+    "defaultFeatures": [
+      "Caves",
+      "Fossils",
+      "OceanCaves"
+    ],
+    "spawnEntries": []
+  }
+}

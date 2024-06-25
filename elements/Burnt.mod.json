@@ -1,0 +1,128 @@
+{
+  "_fv": 33,
+  "_type": "livingentity",
+  "definition": {
+    "mobName": "Incendie [Burnt]",
+    "mobLabel": "",
+    "mobModelName": "ModelburntMDL",
+    "mobModelTexture": "elsen_skin.png",
+    "mobModelGlowTexture": "",
+    "isShakingCondition": {
+      "name": "BurntEntityShakingCondition"
+    },
+    "modelWidth": 0.6,
+    "modelHeight": 1.8,
+    "modelShadowSize": 0.5,
+    "mountedYOffset": 0.0,
+    "hasSpawnEgg": true,
+    "spawnEggBaseColor": {
+      "value": -16777216,
+      "falpha": 0.0
+    },
+    "spawnEggDotColor": {
+      "value": -13421824,
+      "falpha": 0.0
+    },
+    "creativeTab": {
+      "value": "CUSTOM:OFF"
+    },
+    "isBoss": false,
+    "bossBarColor": "PINK",
+    "bossBarType": "PROGRESS",
+    "equipmentMainHand": {
+      "value": ""
+    },
+    "equipmentOffHand": {
+      "value": ""
+    },
+    "equipmentHelmet": {
+      "value": ""
+    },
+    "equipmentBody": {
+      "value": ""
+    },
+    "equipmentLeggings": {
+      "value": ""
+    },
+    "equipmentBoots": {
+      "value": ""
+    },
+    "mobBehaviourType": "Mob",
+    "mobCreatureType": "UNDEAD",
+    "attackStrength": 4,
+    "attackKnockback": 1.5,
+    "knockbackResistance": 0.30000000000000004,
+    "movementSpeed": 0.19999999999999998,
+    "armorBaseValue": 0.0,
+    "trackingRange": 64,
+    "followRange": 25,
+    "health": 20,
+    "xpAmount": 0,
+    "waterMob": false,
+    "flyingMob": false,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "disableCollisions": false,
+    "ridable": false,
+    "canControlForward": false,
+    "canControlStrafe": false,
+    "immuneToFire": false,
+    "immuneToArrows": false,
+    "immuneToFallDamage": true,
+    "immuneToCactus": false,
+    "immuneToDrowning": true,
+    "immuneToLightning": false,
+    "immuneToPotions": false,
+    "immuneToPlayer": false,
+    "immuneToExplosion": false,
+    "immuneToTrident": false,
+    "immuneToAnvil": false,
+    "immuneToWither": false,
+    "immuneToDragonBreath": false,
+    "mobDrop": {
+      "value": "CUSTOM:LuckTicket"
+    },
+    "livingSound": {
+      "value": "CUSTOM:cowextract"
+    },
+    "hurtSound": {
+      "value": "CUSTOM:strike"
+    },
+    "deathSound": {
+      "value": "CUSTOM:strike"
+    },
+    "stepSound": {
+      "value": "block.water.ambient"
+    },
+    "spawnParticles": true,
+    "particleToSpawn": {
+      "value": "WATER_SPLASH"
+    },
+    "particleSpawningShape": "Spread",
+    "particleSpawningRadious": 0.5,
+    "particleAmount": 5,
+    "onInitialSpawn": {
+      "name": "BurntOnInitialEntitySpawn"
+    },
+    "hasAI": true,
+    "aiBase": "(none)",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"242\" y=\"48\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">CUSTOM:CommonSpectre</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">CUSTOM:Elsen</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">EntityLiving</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"doors_break\"><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "breedable": false,
+    "tameable": false,
+    "breedTriggerItems": [],
+    "ranged": false,
+    "rangedAttackItem": {
+      "value": ""
+    },
+    "rangedItemType": "Default item",
+    "spawnThisMob": true,
+    "doesDespawnWhenIdle": true,
+    "spawningProbability": 20,
+    "mobSpawningType": "monster",
+    "minNumberOfMobsPerGroup": 4,
+    "maxNumberOfMobsPerGroup": 4,
+    "restrictionBiomes": [],
+    "spawnInDungeons": false
+  }
+}

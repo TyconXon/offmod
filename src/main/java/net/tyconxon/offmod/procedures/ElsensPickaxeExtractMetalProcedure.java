@@ -41,7 +41,7 @@ public class ElsensPickaxeExtractMetalProcedure {
 					world.addEntity(entityToSpawn);
 				}
 				if (world instanceof World && !world.isRemote()) {
-					((World) world).playSound(null, new BlockPos((int) (entity.getPosX()), (int) (entity.getPosY()), (int) (entity.getPosZ())),
+					((World) world).playSound(null, new BlockPos(entity.getPosX(), entity.getPosY(), entity.getPosZ()),
 							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("offmod:cowextract")),
 							SoundCategory.NEUTRAL, (float) 1, (float) (Math.random() + 0.1));
 				} else {
