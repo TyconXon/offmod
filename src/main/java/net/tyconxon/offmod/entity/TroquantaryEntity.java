@@ -1,7 +1,9 @@
 
 package net.tyconxon.offmod.entity;
 
+import net.tyconxon.offmod.procedures.TroquantaryPlayerCollidesWithThisEntityProcedure;
 import net.tyconxon.offmod.itemgroup.OFFItemGroup;
+import net.tyconxon.offmod.item.ElsensPickaxeItem;
 import net.tyconxon.offmod.entity.renderer.TroquantaryRenderer;
 import net.tyconxon.offmod.OffmodModElements;
 
@@ -22,14 +24,19 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.pathfinding.SwimmerPathNavigator;
 import net.minecraft.pathfinding.PathNodeType;
 import net.minecraft.network.IPacket;
+import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.passive.DolphinEntity;
 import net.minecraft.entity.monster.MonsterEntity;
+import net.minecraft.entity.ai.goal.TemptGoal;
 import net.minecraft.entity.ai.goal.RandomSwimmingGoal;
 import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
 import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
+import net.minecraft.entity.ai.goal.FollowMobGoal;
+import net.minecraft.entity.ai.goal.AvoidEntityGoal;
 import net.minecraft.entity.ai.controller.MovementController;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
@@ -37,7 +44,13 @@ import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.CreatureAttribute;
+
+import java.util.stream.Stream;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.AbstractMap;
 
 @OffmodModElements.ModElement.Tag
 public class TroquantaryEntity extends OffmodModElements.ModElement {
@@ -66,13 +79,13 @@ public class TroquantaryEntity extends OffmodModElements.ModElement {
 		@SubscribeEvent
 		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
 			AttributeModifierMap.MutableAttribute ammma = MobEntity.func_233666_p_();
-			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.3);
+			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.5);
 			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 12);
 			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 0);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 5);
 			ammma = ammma.createMutableAttribute(Attributes.FOLLOW_RANGE, 16);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_KNOCKBACK, 1);
-			ammma = ammma.createMutableAttribute(ForgeMod.SWIM_SPEED.get(), 0.3);
+			ammma = ammma.createMutableAttribute(ForgeMod.SWIM_SPEED.get(), 0.5);
 			event.put(entity, ammma.create());
 		}
 	}
@@ -139,7 +152,10 @@ public class TroquantaryEntity extends OffmodModElements.ModElement {
 				}
 			});
 			this.goalSelector.addGoal(4, new RandomSwimmingGoal(this, 1, 40));
-			this.goalSelector.addGoal(5, new LookRandomlyGoal(this));
+			this.goalSelector.addGoal(5, new FollowMobGoal(this, (float) 1, 10, 5));
+			this.goalSelector.addGoal(6, new AvoidEntityGoal(this, DolphinEntity.class, (float) 6, 1, 1.2));
+			this.goalSelector.addGoal(7, new TemptGoal(this, 1, Ingredient.fromItems(ElsensPickaxeItem.block), false));
+			this.goalSelector.addGoal(8, new LookRandomlyGoal(this));
 		}
 
 		@Override
@@ -162,6 +178,18 @@ public class TroquantaryEntity extends OffmodModElements.ModElement {
 			if (source == DamageSource.DROWN)
 				return false;
 			return super.attackEntityFrom(source, amount);
+		}
+
+		@Override
+		public void onCollideWithPlayer(PlayerEntity sourceentity) {
+			super.onCollideWithPlayer(sourceentity);
+			Entity entity = this;
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+
+			TroquantaryPlayerCollidesWithThisEntityProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("sourceentity", sourceentity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 
 		@Override

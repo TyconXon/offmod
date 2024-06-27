@@ -1,7 +1,6 @@
 package net.tyconxon.offmod.procedures;
 
 import net.tyconxon.offmod.potion.StunnedPotionEffect;
-import net.tyconxon.offmod.potion.ManiaPotionEffect;
 import net.tyconxon.offmod.OffmodMod;
 
 import net.minecraftforge.fml.common.Mod;
@@ -52,31 +51,7 @@ public class ManiaHitProcedure {
 				OffmodMod.LOGGER.warn("Failed to load dependency entity for procedure ManiaHit!");
 			return;
 		}
-		if (dependencies.get("sourceentity") == null) {
-			if (!dependencies.containsKey("sourceentity"))
-				OffmodMod.LOGGER.warn("Failed to load dependency sourceentity for procedure ManiaHit!");
-			return;
-		}
 		Entity entity = (Entity) dependencies.get("entity");
-		Entity sourceentity = (Entity) dependencies.get("sourceentity");
-		if (new Object() {
-			boolean check(Entity _entity) {
-				if (_entity instanceof LivingEntity) {
-					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-					for (EffectInstance effect : effects) {
-						if (effect.getPotion() == ManiaPotionEffect.potion)
-							return true;
-					}
-				}
-				return false;
-			}
-		}.check(sourceentity)) {
-			if (sourceentity instanceof LivingEntity) {
-				((LivingEntity) sourceentity).removePotionEffect(ManiaPotionEffect.potion);
-			}
-			if (sourceentity instanceof LivingEntity)
-				((LivingEntity) sourceentity).addPotionEffect(new EffectInstance(StunnedPotionEffect.potion, (int) 60, (int) 1));
-		}
 		if (new Object() {
 			boolean check(Entity _entity) {
 				if (_entity instanceof LivingEntity) {

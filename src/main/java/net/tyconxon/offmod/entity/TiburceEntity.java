@@ -1,6 +1,7 @@
 
 package net.tyconxon.offmod.entity;
 
+import net.tyconxon.offmod.procedures.TiburcePlayerCollidesWithThisEntityProcedure;
 import net.tyconxon.offmod.procedures.TiburceEntityIsHurtProcedure;
 import net.tyconxon.offmod.itemgroup.OFFItemGroup;
 import net.tyconxon.offmod.entity.renderer.TiburceRenderer;
@@ -57,7 +58,7 @@ import java.util.AbstractMap;
 public class TiburceEntity extends OffmodModElements.ModElement {
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
-			.size(0.6f, 1.8f)).build("tiburce").setRegistryName("tiburce");
+			.size(0.6f, 0.5f)).build("tiburce").setRegistryName("tiburce");
 
 	public TiburceEntity(OffmodModElements instance) {
 		super(instance, 53);
@@ -106,7 +107,7 @@ public class TiburceEntity extends OffmodModElements.ModElement {
 
 		public CustomEntity(EntityType<CustomEntity> type, World world) {
 			super(type, world);
-			experienceValue = 4;
+			experienceValue = 10;
 			setNoAI(false);
 		}
 
@@ -172,6 +173,18 @@ public class TiburceEntity extends OffmodModElements.ModElement {
 			if (source == DamageSource.FALL)
 				return false;
 			return super.attackEntityFrom(source, amount);
+		}
+
+		@Override
+		public void onCollideWithPlayer(PlayerEntity sourceentity) {
+			super.onCollideWithPlayer(sourceentity);
+			Entity entity = this;
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+
+			TiburcePlayerCollidesWithThisEntityProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("sourceentity", sourceentity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 	}
 }

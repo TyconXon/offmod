@@ -70,13 +70,13 @@ public class CommonSpectreEntity extends OffmodModElements.ModElement {
 		@SubscribeEvent
 		public void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
 			AttributeModifierMap.MutableAttribute ammma = MobEntity.func_233666_p_();
-			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.25);
+			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.35);
 			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 4);
 			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 0);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 4);
 			ammma = ammma.createMutableAttribute(Attributes.FOLLOW_RANGE, 16);
 			ammma = ammma.createMutableAttribute(Attributes.ATTACK_KNOCKBACK, 0.1);
-			ammma = ammma.createMutableAttribute(Attributes.FLYING_SPEED, 0.25);
+			ammma = ammma.createMutableAttribute(Attributes.FLYING_SPEED, 0.35);
 			event.put(entity, ammma.create());
 		}
 	}
@@ -125,7 +125,7 @@ public class CommonSpectreEntity extends OffmodModElements.ModElement {
 				public void startExecuting() {
 					LivingEntity livingentity = CustomEntity.this.getAttackTarget();
 					Vector3d vec3d = livingentity.getEyePosition(1);
-					CustomEntity.this.moveController.setMoveTo(vec3d.x, vec3d.y, vec3d.z, 1);
+					CustomEntity.this.moveController.setMoveTo(vec3d.x, vec3d.y, vec3d.z, 1.5);
 				}
 
 				@Override
@@ -137,7 +137,7 @@ public class CommonSpectreEntity extends OffmodModElements.ModElement {
 						double d0 = CustomEntity.this.getDistanceSq(livingentity);
 						if (d0 < 16) {
 							Vector3d vec3d = livingentity.getEyePosition(1);
-							CustomEntity.this.moveController.setMoveTo(vec3d.x, vec3d.y, vec3d.z, 1);
+							CustomEntity.this.moveController.setMoveTo(vec3d.x, vec3d.y, vec3d.z, 1.5);
 						}
 					}
 				}
@@ -148,8 +148,8 @@ public class CommonSpectreEntity extends OffmodModElements.ModElement {
 					return (double) (4.0 + entity.getWidth() * entity.getWidth());
 				}
 			});
-			this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, ElsenEntity.CustomEntity.class, true, true));
-			this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, false));
+			this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, false));
+			this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, ElsenEntity.CustomEntity.class, true, true));
 			this.goalSelector.addGoal(5, new RandomWalkingGoal(this, 1.2, 20) {
 				@Override
 				protected Vector3d getPosition() {

@@ -1,0 +1,21 @@
+{
+  "_fv": 33,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of Flesh Expansion",
+    "splashName": "Splash Potion of Flesh Expansion",
+    "lingeringName": "Lingering Potion of Flesh Expansion",
+    "arrowName": "Arrow of Flesh Expansion",
+    "effects": [
+      {
+        "effect": {
+          "value": "HEALTH_BOOST"
+        },
+        "duration": 6000,
+        "amplifier": 1,
+        "ambient": false,
+        "showParticles": false
+      }
+    ]
+  }
+}

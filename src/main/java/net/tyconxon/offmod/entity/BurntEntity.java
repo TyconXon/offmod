@@ -64,7 +64,7 @@ import java.util.AbstractMap;
 public class BurntEntity extends OffmodModElements.ModElement {
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
-			.size(0.6f, 1.8f)).build("burnt").setRegistryName("burnt");
+			.size(0.6f, 5.2f)).build("burnt").setRegistryName("burnt");
 
 	public BurntEntity(OffmodModElements instance) {
 		super(instance, 56);
@@ -206,14 +206,10 @@ public class BurntEntity extends OffmodModElements.ModElement {
 			Entity entity = this;
 			if (true)
 				for (int l = 0; l < 5; ++l) {
-					double d0 = (x + random.nextFloat());
-					double d1 = (y + random.nextFloat());
-					double d2 = (z + random.nextFloat());
-					int i1 = random.nextInt(2) * 2 - 1;
-					double d3 = (random.nextFloat() - 0.5D) * 0.5D;
-					double d4 = (random.nextFloat() - 0.5D) * 0.5D;
-					double d5 = (random.nextFloat() - 0.5D) * 0.5D;
-					world.addParticle(ParticleTypes.SPLASH, d0, d1, d2, d3, d4, d5);
+					double d0 = (x + 0.5) + (random.nextFloat() - 0.5) * 0.5D * 20;
+					double d1 = ((y + 0.7) + (random.nextFloat() - 0.5) * 0.5D) + 0.5;
+					double d2 = (z + 0.5) + (random.nextFloat() - 0.5) * 0.5D * 20;
+					world.addParticle(ParticleTypes.SPLASH, d0, d1, d2, 0, 0, 0);
 				}
 		}
 	}

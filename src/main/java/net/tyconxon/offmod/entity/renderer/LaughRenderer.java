@@ -25,7 +25,7 @@ public class LaughRenderer {
 		@OnlyIn(Dist.CLIENT)
 		public void registerModels(ModelRegistryEvent event) {
 			RenderingRegistry.registerEntityRenderingHandler(LaughEntity.entity, renderManager -> {
-				return new MobRenderer(renderManager, new ModelAhah(), 0.5f) {
+				return new MobRenderer(renderManager, new ModelAhah(), 0.1f) {
 
 					@Override
 					public ResourceLocation getEntityTexture(Entity entity) {

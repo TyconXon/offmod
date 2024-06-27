@@ -18,6 +18,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.MobEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ILivingEntityData;
 import net.minecraft.entity.Entity;
 
@@ -46,53 +47,65 @@ public class TyroRightClickedOnEntityProcedure {
 				OffmodMod.LOGGER.warn("Failed to load dependency z for procedure TyroRightClickedOnEntity!");
 			return;
 		}
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				OffmodMod.LOGGER.warn("Failed to load dependency entity for procedure TyroRightClickedOnEntity!");
+			return;
+		}
 		IWorld world = (IWorld) dependencies.get("world");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		if (world instanceof World && !world.isRemote()) {
-			((World) world).playSound(null, new BlockPos(x, y, z),
-					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("offmod:hylicsphone")),
-					SoundCategory.NEUTRAL, (float) 1, (float) 1);
-		} else {
-			((World) world).playSound(x, y, z,
-					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("offmod:hylicsphone")),
-					SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-		}
-		if (world instanceof ServerWorld) {
-			((ServerWorld) world).spawnParticle(PhoneCallParticle.particle, x, y, z, (int) 3, 1, 1, 1, 0.01);
-		}
-		new Object() {
-			private int ticks = 0;
-			private float waitTicks;
-			private IWorld world;
-
-			public void start(IWorld world, int waitTicks) {
-				this.waitTicks = waitTicks;
-				MinecraftForge.EVENT_BUS.register(this);
-				this.world = world;
-			}
-
-			@SubscribeEvent
-			public void tick(TickEvent.ServerTickEvent event) {
-				if (event.phase == TickEvent.Phase.END) {
-					this.ticks += 1;
-					if (this.ticks >= this.waitTicks)
-						run();
+		Entity entity = (Entity) dependencies.get("entity");
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) < 5) {
+			if (Math.random() < 0.7) {
+				if (world instanceof World && !world.isRemote()) {
+					((World) world).playSound(null, new BlockPos(x, y, z),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("offmod:hylicsphone")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1);
+				} else {
+					((World) world).playSound(x, y, z,
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("offmod:hylicsphone")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 				}
-			}
-
-			private void run() {
 				if (world instanceof ServerWorld) {
-					Entity entityToSpawn = new TyroEntity.CustomEntity(TyroEntity.entity, (World) world);
-					entityToSpawn.setLocationAndAngles(x, y, z, world.getRandom().nextFloat() * 360F, 0);
-					if (entityToSpawn instanceof MobEntity)
-						((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world, world.getDifficultyForLocation(entityToSpawn.getPosition()),
-								SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);
-					world.addEntity(entityToSpawn);
+					((ServerWorld) world).spawnParticle(PhoneCallParticle.particle, x, y, z, (int) 3, 1, 1, 1, 0.01);
 				}
-				MinecraftForge.EVENT_BUS.unregister(this);
+				new Object() {
+					private int ticks = 0;
+					private float waitTicks;
+					private IWorld world;
+
+					public void start(IWorld world, int waitTicks) {
+						this.waitTicks = waitTicks;
+						MinecraftForge.EVENT_BUS.register(this);
+						this.world = world;
+					}
+
+					@SubscribeEvent
+					public void tick(TickEvent.ServerTickEvent event) {
+						if (event.phase == TickEvent.Phase.END) {
+							this.ticks += 1;
+							if (this.ticks >= this.waitTicks)
+								run();
+						}
+					}
+
+					private void run() {
+						if (world instanceof ServerWorld) {
+							Entity entityToSpawn = new TyroEntity.CustomEntity(TyroEntity.entity, (World) world);
+							entityToSpawn.setLocationAndAngles((x + Math.random() * 3), (y + 2 + Math.random() * 3), (z + Math.random() * 3),
+									world.getRandom().nextFloat() * 360F, 0);
+							if (entityToSpawn instanceof MobEntity)
+								((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world,
+										world.getDifficultyForLocation(entityToSpawn.getPosition()), SpawnReason.MOB_SUMMONED,
+										(ILivingEntityData) null, (CompoundNBT) null);
+							world.addEntity(entityToSpawn);
+						}
+						MinecraftForge.EVENT_BUS.unregister(this);
+					}
+				}.start(world, (int) 60);
 			}
-		}.start(world, (int) 60);
+		}
 	}
 }

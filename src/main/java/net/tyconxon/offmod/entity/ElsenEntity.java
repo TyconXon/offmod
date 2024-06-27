@@ -1,6 +1,8 @@
 
 package net.tyconxon.offmod.entity;
 
+import net.tyconxon.offmod.procedures.ElsenItIsStruckByLightningProcedure;
+import net.tyconxon.offmod.procedures.ElsenEntityIsHurtProcedure;
 import net.tyconxon.offmod.itemgroup.OFFItemGroup;
 import net.tyconxon.offmod.item.ElsensPickaxeItem;
 import net.tyconxon.offmod.entity.renderer.ElsenRenderer;
@@ -15,6 +17,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 
+import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.DamageSource;
@@ -28,6 +31,7 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.passive.CowEntity;
 import net.minecraft.entity.monster.ZombieEntity;
 import net.minecraft.entity.monster.MonsterEntity;
+import net.minecraft.entity.effect.LightningBoltEntity;
 import net.minecraft.entity.ai.goal.WaterAvoidingRandomWalkingGoal;
 import net.minecraft.entity.ai.goal.TemptGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
@@ -47,9 +51,15 @@ import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.block.Blocks;
+
+import java.util.stream.Stream;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.AbstractMap;
 
 @OffmodModElements.ModElement.Tag
 public class ElsenEntity extends OffmodModElements.ModElement {
@@ -109,23 +119,23 @@ public class ElsenEntity extends OffmodModElements.ModElement {
 		protected void registerGoals() {
 			super.registerGoals();
 			this.goalSelector.addGoal(1, new PanicGoal(this, 1.6));
-			this.goalSelector.addGoal(2, new TemptGoal(this, 1, Ingredient.fromItems(Items.SUGAR), false));
+			this.goalSelector.addGoal(2, new TemptGoal(this, 1.2, Ingredient.fromItems(Items.SUGAR), false));
 			this.goalSelector.addGoal(3, new AvoidEntityGoal(this, CommonSpectreEntity.CustomEntity.class, (float) 6, 1.25, 1.1));
 			this.goalSelector.addGoal(4, new BreakBlockGoal(Blocks.SUGAR_CANE, this, 1, (int) 3));
 			this.goalSelector.addGoal(5, new BreakBlockGoal(RawMetalBlock.block, this, 1, (int) 3));
-			this.targetSelector.addGoal(6, new HurtByTargetGoal(this).setCallsForHelp());
-			this.goalSelector.addGoal(7, new MeleeAttackGoal(this, 0.9, false) {
+			this.goalSelector.addGoal(6, new MeleeAttackGoal(this, 0.9, false) {
 				@Override
 				protected double getAttackReachSqr(LivingEntity entity) {
 					return (double) (4.0 + entity.getWidth() * entity.getWidth());
 				}
 			});
-			this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, CowEntity.class, true, true));
-			this.goalSelector.addGoal(9, new SwimGoal(this));
-			this.goalSelector.addGoal(10, new WaterAvoidingRandomWalkingGoal(this, 0.8));
-			this.goalSelector.addGoal(11, new AvoidEntityGoal(this, ZombieEntity.class, (float) 6, 1, 1.2));
-			this.goalSelector.addGoal(12, new LookRandomlyGoal(this));
-			this.goalSelector.addGoal(13, new ReturnToVillageGoal(this, 0.6, false));
+			this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, CowEntity.class, true, true));
+			this.goalSelector.addGoal(8, new SwimGoal(this));
+			this.goalSelector.addGoal(9, new WaterAvoidingRandomWalkingGoal(this, 0.8));
+			this.goalSelector.addGoal(10, new AvoidEntityGoal(this, ZombieEntity.class, (float) 6, 1, 1.2));
+			this.goalSelector.addGoal(11, new LookRandomlyGoal(this));
+			this.goalSelector.addGoal(12, new ReturnToVillageGoal(this, 0.6, false));
+			this.targetSelector.addGoal(13, new HurtByTargetGoal(this).setCallsForHelp());
 			this.goalSelector.addGoal(14, new LookAtGoal(this, CreatureEntity.class, (float) 6));
 			this.goalSelector.addGoal(15, new FollowMobGoal(this, (float) 1, 3, 5));
 		}
@@ -158,6 +168,35 @@ public class ElsenEntity extends OffmodModElements.ModElement {
 		@Override
 		public net.minecraft.util.SoundEvent getDeathSound() {
 			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("offmod:strike"));
+		}
+
+		@Override
+		public void func_241841_a(ServerWorld serverWorld, LightningBoltEntity entityLightningBolt) {
+			super.func_241841_a(serverWorld, entityLightningBolt);
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			Entity entity = this;
+
+			ElsenItIsStruckByLightningProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+		}
+
+		@Override
+		public boolean attackEntityFrom(DamageSource source, float amount) {
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			Entity entity = this;
+			Entity sourceentity = source.getTrueSource();
+
+			ElsenEntityIsHurtProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+			return super.attackEntityFrom(source, amount);
 		}
 	}
 }

@@ -63,7 +63,7 @@ import java.util.AbstractMap;
 public class TyroEntity extends OffmodModElements.ModElement {
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.CREATURE)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
-			.size(0.6f, 1.8f)).build("tyro").setRegistryName("tyro");
+			.size(0.6f, 1.7000000000000002f)).build("tyro").setRegistryName("tyro");
 
 	public TyroEntity(OffmodModElements instance) {
 		super(instance, 58);
@@ -161,6 +161,16 @@ public class TyroEntity extends OffmodModElements.ModElement {
 
 		@Override
 		public boolean attackEntityFrom(DamageSource source, float amount) {
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			Entity entity = this;
+			Entity sourceentity = source.getTrueSource();
+
+			TyroRightClickedOnEntityProcedure.executeProcedure(Stream
+					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
+							new AbstractMap.SimpleEntry<>("z", z), new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			if (source == DamageSource.FALL)
 				return false;
 			return super.attackEntityFrom(source, amount);
@@ -208,15 +218,6 @@ public class TyroEntity extends OffmodModElements.ModElement {
 						this.enablePersistence();
 				}
 			}
-			double x = this.getPosX();
-			double y = this.getPosY();
-			double z = this.getPosZ();
-			Entity entity = this;
-
-			TyroRightClickedOnEntityProcedure.executeProcedure(Stream
-					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
-							new AbstractMap.SimpleEntry<>("z", z))
-					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 			return retval;
 		}
 

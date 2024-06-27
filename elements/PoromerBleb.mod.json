@@ -1,0 +1,30 @@
+{
+  "_fv": 33,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of Poromer Bleb",
+    "splashName": "Splash Potion of Poromer Bleb",
+    "lingeringName": "Lingering Potion of Poromer Bleb",
+    "arrowName": "Arrow of Poromer Bleb",
+    "effects": [
+      {
+        "effect": {
+          "value": "INSTANT_HEALTH"
+        },
+        "duration": 15,
+        "amplifier": 1,
+        "ambient": false,
+        "showParticles": true
+      },
+      {
+        "effect": {
+          "value": "RESISTANCE"
+        },
+        "duration": 1000,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

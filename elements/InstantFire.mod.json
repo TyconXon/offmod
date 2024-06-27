@@ -1,0 +1,21 @@
+{
+  "_fv": 33,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of Instant Fire",
+    "splashName": "Splash Potion of Instant Fire",
+    "lingeringName": "Lingering Potion of Instant Fire",
+    "arrowName": "Arrow of Instant Fire",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:Burning"
+        },
+        "duration": 60,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

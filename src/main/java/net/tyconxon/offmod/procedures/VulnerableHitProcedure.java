@@ -112,7 +112,8 @@ public class VulnerableHitProcedure {
 						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("offmod:hylicsvuln")),
 						SoundCategory.NEUTRAL, (float) 1, (float) 1.5, false);
 			}
-			if (world.getWorldInfo().getGameRulesInstance().getInt(VulnerablePersistanceGameRule.gamerule) <= new Object() {
+			entity.getPersistentData().putDouble("vulnhits", (entity.getPersistentData().getDouble("vulnhits") + 1));
+			if (world.getWorldInfo().getGameRulesInstance().getInt(VulnerablePersistanceGameRule.gamerule) * new Object() {
 				int check(Entity _entity) {
 					if (_entity instanceof LivingEntity) {
 						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
@@ -123,7 +124,7 @@ public class VulnerableHitProcedure {
 					}
 					return 0;
 				}
-			}.check(entity) * entity.getPersistentData().getDouble("vulnhits")) {
+			}.check(entity) <= entity.getPersistentData().getDouble("vulnhits")) {
 				if (entity instanceof LivingEntity) {
 					((LivingEntity) entity).removePotionEffect(VulnerablePotionEffect.potion);
 				}

@@ -8,7 +8,7 @@
     "mobModelTexture": "texture.png",
     "mobModelGlowTexture": "",
     "modelWidth": 0.6,
-    "modelHeight": 1.8,
+    "modelHeight": 0.5,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
@@ -54,7 +54,7 @@
     "trackingRange": 64,
     "followRange": 16,
     "health": 13,
-    "xpAmount": 4,
+    "xpAmount": 10,
     "waterMob": false,
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
@@ -101,6 +101,9 @@
     "particleAmount": 4,
     "whenMobIsHurt": {
       "name": "TiburceEntityIsHurt"
+    },
+    "onPlayerCollidesWith": {
+      "name": "TiburcePlayerCollidesWithThisEntity"
     },
     "hasAI": true,
     "aiBase": "(none)",

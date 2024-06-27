@@ -38,7 +38,7 @@ public class SmokePurification {
 		try {
 			Class clazz = net.minecraft.potion.PotionBrewing.class;
 			Method mth = ObfuscationReflectionHelper.findMethod(clazz, "func_193357_a", Potion.class, Item.class, Potion.class);
-			mth.invoke(null, BottleOfSmokeItem.block, Items.OAK_LEAVES, Potions.WATER_BREATHING);
+			mth.invoke(null, BottleOfSmokeItem.block, Items.WATER_BUCKET, Potions.WATER_BREATHING);
 			// To add more recipes, you can copy the line above, for ex.
 			// mth.invoke(null, potion2, item2, potion3);
 		} catch (Throwable e) {

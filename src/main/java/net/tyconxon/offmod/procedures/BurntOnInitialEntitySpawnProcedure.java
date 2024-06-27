@@ -78,7 +78,7 @@ public class BurntOnInitialEntitySpawnProcedure {
 				entity.setNoGravity((false));
 				MinecraftForge.EVENT_BUS.unregister(this);
 			}
-		}.start(world, (int) 50);
+		}.start(world, (int) 20);
 		if (Math.random() < 0.3) {
 			new Object() {
 				private int ticks = 0;
@@ -105,7 +105,7 @@ public class BurntOnInitialEntitySpawnProcedure {
 						((LivingEntity) entity).addPotionEffect(new EffectInstance(ManiaPotionEffect.potion, (int) 60, (int) 1));
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}.start(world, (int) 80);
+			}.start(world, (int) 30);
 		}
 	}
 }

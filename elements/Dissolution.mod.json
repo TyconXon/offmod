@@ -1,0 +1,30 @@
+{
+  "_fv": 33,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of Dissolution",
+    "splashName": "Splash Potion of Dissolution",
+    "lingeringName": "Lingering Potion of Dissolution",
+    "arrowName": "Arrow of Dissolution",
+    "effects": [
+      {
+        "effect": {
+          "value": "POISON"
+        },
+        "duration": 600,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      },
+      {
+        "effect": {
+          "value": "WEAKNESS"
+        },
+        "duration": 600,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

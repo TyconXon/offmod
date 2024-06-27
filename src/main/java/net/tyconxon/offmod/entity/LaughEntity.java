@@ -1,6 +1,7 @@
 
 package net.tyconxon.offmod.entity;
 
+import net.tyconxon.offmod.procedures.LaughPlayerCollidesWithThisEntityProcedure;
 import net.tyconxon.offmod.itemgroup.OFFItemGroup;
 import net.tyconxon.offmod.entity.renderer.LaughRenderer;
 import net.tyconxon.offmod.OffmodModElements;
@@ -52,14 +53,18 @@ import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.entity.AreaEffectCloudEntity;
 import net.minecraft.block.BlockState;
 
+import java.util.stream.Stream;
 import java.util.Random;
+import java.util.Map;
+import java.util.HashMap;
 import java.util.EnumSet;
+import java.util.AbstractMap;
 
 @OffmodModElements.ModElement.Tag
 public class LaughEntity extends OffmodModElements.ModElement {
 	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire()
-			.size(0.6f, 1.8f)).build("laugh").setRegistryName("laugh");
+			.size(0.5f, 0.5f)).build("laugh").setRegistryName("laugh");
 
 	public LaughEntity(OffmodModElements instance) {
 		super(instance, 55);
@@ -241,6 +246,18 @@ public class LaughEntity extends OffmodModElements.ModElement {
 			if (source.getDamageType().equals("witherSkull"))
 				return false;
 			return super.attackEntityFrom(source, amount);
+		}
+
+		@Override
+		public void onCollideWithPlayer(PlayerEntity sourceentity) {
+			super.onCollideWithPlayer(sourceentity);
+			Entity entity = this;
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+
+			LaughPlayerCollidesWithThisEntityProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity))
+					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 		}
 
 		@Override

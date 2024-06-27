@@ -681,10 +681,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
           }
         ]
       },
@@ -924,6 +920,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -1032,6 +1032,341 @@
       "registry_name": "vulnerablePersistance",
       "metadata": {
         "type": "number"
+      },
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "FleshExpansion",
+      "type": "potion",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flesh_expansion",
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "TiburcePlayerCollidesWithThisEntity",
+      "type": "procedure",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tiburce_player_collides_with_this_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Characters/Spectre"
+    },
+    {
+      "name": "TroquantaryPlayerCollidesWithThisEntity",
+      "type": "procedure",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "troquantary_player_collides_with_this_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Characters/Spectre"
+    },
+    {
+      "name": "LaughPlayerCollidesWithThisEntity",
+      "type": "procedure",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "laugh_player_collides_with_this_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Characters/Spectre"
+    },
+    {
+      "name": "CrownOfTheDead",
+      "type": "livingentity",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crown_of_the_dead",
+      "path": "~/Characters/Spectre"
+    },
+    {
+      "name": "BurningEffectStartedapplied",
+      "type": "procedure",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burning_effect_startedapplied",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "Burning",
+      "type": "potioneffect",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burning",
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "BurningOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burning_on_effect_active_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "BurningEffectExpires",
+      "type": "procedure",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burning_effect_expires",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "SoulCrisper",
+      "type": "potion",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_crisper",
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "InstantFire",
+      "type": "potion",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "instant_fire",
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "PKFireParticle",
+      "type": "particle",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pk_fire_particle",
+      "path": "~/Items/Earthbound"
+    },
+    {
+      "name": "PKFireRightclickedOnBlock",
+      "type": "procedure",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pk_fire_rightclicked_on_block",
+      "metadata": {
+        "return_type": "actionresulttype",
+        "dependencies": []
+      },
+      "path": "~/Items/Earthbound"
+    },
+    {
+      "name": "PKFireRightclicked",
+      "type": "procedure",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pk_fire_rightclicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items/Earthbound"
+    },
+    {
+      "name": "PKFire",
+      "type": "item",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pk_fire",
+      "path": "~/Items/Earthbound"
+    },
+    {
+      "name": "ElsenItIsStruckByLightning",
+      "type": "procedure",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "elsen_it_is_struck_by_lightning",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Characters"
+    },
+    {
+      "name": "ElsenEntityIsHurt",
+      "type": "procedure",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "elsen_entity_is_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Characters"
+    },
+    {
+      "name": "Dissolution",
+      "type": "potion",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dissolution",
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "PoisonResistanceOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_resistance_on_effect_active_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "PoisonResistance",
+      "type": "potioneffect",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_resistance",
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "FoamSpray",
+      "type": "potion",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "foam_spray",
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "PoromerBleb",
+      "type": "potion",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poromer_bleb",
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "LinkMollusc",
+      "type": "potioneffect",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "link_mollusc",
+      "path": "~/Items/Hylics"
+    },
+    {
+      "name": "LinkMolluscHit",
+      "type": "procedure",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "link_mollusc_hit",
+      "metadata": {
+        "dependencies": []
       },
       "path": "~/Items/Hylics"
     }
@@ -1194,20 +1529,54 @@
   ],
   "language_map": {
     "en_us": {
+      "item.minecraft.lingering_potion.effect.dissolution": "Lingering Potion of Dissolution",
       "subtitles.robotstep": "",
-      "block.offmod.green_scrapped_metal": "Green Scrapped Metal",
+      "item.minecraft.lingering_potion.effect.poromer_bleb": "Lingering Potion of Poromer Bleb",
       "entity.offmod.troquantary": "Troquantary",
+      "item.minecraft.tipped_arrow.effect.foam_spray": "Arrow of Foam Spray",
+      "item.minecraft.tipped_arrow.effect.soul_crisper": "Arrow of Soul Crisper",
+      "entity.offmod.laugh": "AhAh!",
+      "item.offmod.molochs_meat": "Belial�s meat",
+      "item.minecraft.tipped_arrow.effect.confusion": "Arrow of Confusion",
+      "entity.offmod.tyro": "Tyro",
+      "block.offmod.atm": "ATM",
+      "item.minecraft.tipped_arrow.effect.flesh_expansion": "Arrow of Flesh Expansion",
+      "effect.link_mollusc": "Link Mollusc",
+      "entity.offmod.crown_of_the_dead": "Crown Of The Dead",
+      "item.offmod.tyro_spawn_egg": "Tyro Spawn Egg",
+      "block.offmod.plastic": "Liquid Plastic",
+      "block.offmod.meat": "Meat",
+      "item.minecraft.potion.effect.dissolution": "Potion of Dissolution",
+      "item.minecraft.lingering_potion.effect.vulnerability": "Lingering Potion of Vulnerability",
+      "item.minecraft.splash_potion.effect.poolwine": "Poolwine Splash",
+      "item.minecraft.splash_potion.effect.poromer_bleb": "Splash Potion of Poromer Bleb",
+      "gamerule.vulnerablePersistance": "Vulnerability Persisting Hits:",
+      "subtitles.womp": "Womp (Death)",
+      "effect.confusion_ailment": "Confusion",
+      "item.minecraft.splash_potion.effect.dissolution": "Splash Potion of Dissolution",
+      "subtitles.strike": "Strike",
+      "item.minecraft.splash_potion.effect.flesh_expansion": "Splash Potion of Flesh Expansion",
+      "item.offmod.plastic_bucket": "Plastic Bucket",
+      "item.offmod.burnt_spawn_egg": "Incendie [Burnt] Spawn Egg",
+      "item.minecraft.potion.effect.confusion": "Potion of Confusion",
+      "entity.offmod.common_spectre": "Common Spectre",
+      "item.offmod.luck_ticket": "Luck Ticket",
+      "item.minecraft.lingering_potion.effect.poolwine": "Lingering Poolwine Splash",
+      "subtitles.cash_register": "Cash register ding",
+      "subtitles.global": "Elsen speaking",
+      "item.offmod.crown_of_the_dead_spawn_egg": "Crown Of The Dead Spawn Egg",
+      "item.minecraft.potion.effect.instant_fire": "Potion of Instant Fire",
+      "item.offmod.meat_bucket": "Meat Bucket",
+      "item.minecraft.tipped_arrow.effect.poromer_bleb": "Arrow of Poromer Bleb",
+      "subtitles.itemuse": "Item used.",
+      "block.offmod.green_scrapped_metal": "Green Scrapped Metal",
       "item.offmod.laugh_spawn_egg": "AhAh! Spawn Egg",
       "item.minecraft.potion.effect.vulnerability": "Potion of Vulnerability",
       "entity.offmod.tiburce": "Tiburce",
       "biome.offmod.afterlife": "Afterlife",
-      "item.offmod.molochs_meat": "Belial�s meat",
-      "entity.offmod.laugh": "AhAh!",
+      "effect.burning": "Burning",
       "entity.offmod.burnt": "Incendie [Burnt]",
-      "item.minecraft.tipped_arrow.effect.confusion": "Arrow of Confusion",
       "item.offmod.elsens_pickaxe": "Elsen\u0027s Pickaxe",
-      "entity.offmod.tyro": "Tyro",
-      "block.offmod.atm": "ATM",
       "subtitles.hylicshit": "Hylics-type entity hit",
       "subtitles.hylicscream": "Spraying shaving cream",
       "subtitles.hylicspoolwine": "Poolwine consumed",
@@ -1217,54 +1586,50 @@
       "block.offmod.meat_grinder": "Meat Grinder",
       "itemGroup.taboff": "OFF",
       "gamerule.vulnerablePersistance.description": "How many hits will the Vulnerability effect persist through?",
-      "item.offmod.tyro_spawn_egg": "Tyro Spawn Egg",
       "item.minecraft.splash_potion.effect.confusion": "Splash Potion of Confusion",
-      "block.offmod.plastic": "Liquid Plastic",
-      "block.offmod.meat": "Meat",
+      "item.minecraft.lingering_potion.effect.soul_crisper": "Lingering Potion of Soul Crisper",
+      "item.minecraft.potion.effect.flesh_expansion": "Potion of Flesh Expansion",
       "item.minecraft.tipped_arrow.effect.poolwine": "Poolwine Arrow",
+      "item.offmod.pk_fire": "PK Fire",
       "effect.stunned": "Stunned",
       "item.minecraft.potion.effect.poolwine": "Poolwine",
       "block.offmod.raw_metal": "Raw Metal",
-      "item.minecraft.lingering_potion.effect.vulnerability": "Lingering Potion of Vulnerability",
-      "item.minecraft.splash_potion.effect.poolwine": "Poolwine Splash",
       "subtitles.hylicsshaker": "Hylics-entity prepares",
       "subtitles.cowextract": "Metal Extraction",
       "fluid.offmod.plastic": "Liquid Plastic",
-      "gamerule.vulnerablePersistance": "Vulnerability Persisting Hits:",
-      "subtitles.womp": "Womp (Death)",
+      "item.minecraft.lingering_potion.effect.foam_spray": "Lingering Potion of Foam Spray",
+      "item.minecraft.splash_potion.effect.instant_fire": "Splash Potion of Instant Fire",
       "subtitles.error": "error",
-      "effect.confusion_ailment": "Confusion",
+      "item.minecraft.potion.effect.foam_spray": "Potion of Foam Spray",
       "subtitles.hylicsphone": "Ring ring! (Hylics-entity calling for help)",
+      "item.minecraft.lingering_potion.effect.flesh_expansion": "Lingering Potion of Flesh Expansion",
       "subtitles.hylicscharge": "Hylics-entity Charge Up",
       "item.offmod.troquantary_spawn_egg": "Troquantary Spawn Egg",
-      "subtitles.strike": "Strike",
       "item.offmod.ashley_bat": "Ashley Bat",
+      "item.minecraft.potion.effect.poromer_bleb": "Potion of Poromer Bleb",
       "item.minecraft.splash_potion.effect.vulnerability": "Splash Potion of Vulnerability",
       "subtitles.hylicsvuln": "Entity vulnerable ",
-      "item.offmod.plastic_bucket": "Plastic Bucket",
-      "item.offmod.burnt_spawn_egg": "Incendie [Burnt] Spawn Egg",
       "entity.offmod.pedalo": "Pedalo",
       "item.offmod.elsen_spawn_egg": "Elsen Spawn Egg",
       "item.offmod.pedalo_spawn_egg": "Pedalo Spawn Egg",
       "fluid.offmod.meat": "Meat",
-      "item.minecraft.potion.effect.confusion": "Potion of Confusion",
+      "item.minecraft.potion.effect.soul_crisper": "Potion of Soul Crisper",
       "effect.mania": "Mania",
-      "entity.offmod.common_spectre": "Common Spectre",
       "entity.offmod.elsen": "Elsen",
-      "item.offmod.luck_ticket": "Luck Ticket",
       "item.offmod.abaddons_meat": "Abaddon\u0027s Meat",
-      "item.minecraft.lingering_potion.effect.poolwine": "Lingering Poolwine Splash",
       "item.minecraft.tipped_arrow.effect.vulnerability": "Arrow of Vulnerability",
       "item.offmod.bottle_of_smoke": "Bottle Of Smoke",
+      "item.minecraft.lingering_potion.effect.instant_fire": "Lingering Potion of Instant Fire",
       "itemGroup.tabearthbound": "OtherRPG",
+      "item.minecraft.splash_potion.effect.soul_crisper": "Splash Potion of Soul Crisper",
       "effect.vulnerable": "Vulnerable",
-      "subtitles.cash_register": "Cash register ding",
-      "subtitles.global": "Elsen speaking",
+      "item.minecraft.tipped_arrow.effect.dissolution": "Arrow of Dissolution",
       "item.offmod.fortune_ticket": "Fortune Ticket",
       "subtitles.hylicsspeech": "Hylics-entity speech",
-      "item.offmod.meat_bucket": "Meat Bucket",
-      "subtitles.itemuse": "Item used.",
-      "item.offmod.tiburce_spawn_egg": "Tiburce Spawn Egg"
+      "item.minecraft.splash_potion.effect.foam_spray": "Splash Potion of Foam Spray",
+      "item.offmod.tiburce_spawn_egg": "Tiburce Spawn Egg",
+      "effect.poison_resistance": "Poison Resistance",
+      "item.minecraft.tipped_arrow.effect.instant_fire": "Arrow of Instant Fire"
     }
   },
   "foldersRoot": {

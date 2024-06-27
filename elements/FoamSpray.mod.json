@@ -1,0 +1,39 @@
+{
+  "_fv": 33,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of Foam Spray",
+    "splashName": "Splash Potion of Foam Spray",
+    "lingeringName": "Lingering Potion of Foam Spray",
+    "arrowName": "Arrow of Foam Spray",
+    "effects": [
+      {
+        "effect": {
+          "value": "HEALTH_BOOST"
+        },
+        "duration": 1600,
+        "amplifier": 2,
+        "ambient": false,
+        "showParticles": true
+      },
+      {
+        "effect": {
+          "value": "CUSTOM:PoisonResistance"
+        },
+        "duration": 2000,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      },
+      {
+        "effect": {
+          "value": "FIRE_RESISTANCE"
+        },
+        "duration": 2000,
+        "amplifier": 2,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}
